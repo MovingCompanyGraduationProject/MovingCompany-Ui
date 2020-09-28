@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.p12-head {
+    background: url(../images/p12_bg.png) no-repeat;
+    background-size: cover;
+    height: 80px;
+}
+.pad-lr {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.p12-fbxx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 38px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    background: #f21224;
+    font-size: 14px;
+    margin-left: 25px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发布资讯-巧瓜搬家网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<style type="text/css">
+    .layui-btn {
+        display: none;
+    }
+</style>
+<body>
+<div class="header">
+    <div class="head-top flex align-center justify-between pad-lr">
+        <p><span></span><img width="11" height="13" src="images/home_dw.png" alt=""> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
+        <ul class="head-top-ul p15-head-ul">
+            <li><a href="javascript:;">用户名字</a></li>
+            <li><a href="logout.html">退出</a></li>
+            <li>
+                <a href="gerenzhongxin.html">个人中心 <img src="images/p15_bot.png" alt=""></a>
+                <ul class="smul" style="margin-left: -32px;">
+                    <li><a href="release.html">我的发布</a></li>
+                    <li><a href="info.html">个人资料</a></li>
+                    <li><a href="auth.html">认证管理</a></li> 
+                    <li><a href="setting.html">密码设置</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="p12-head flex justify-between align-center pad-lr">
+        <img src="images/s_logo1.png" width="169" height="40" alt="">
+        <div class="p12-head-right flex">
+            <a href="addinfo.html" class="p12-fbxx">发布信息</a>
+        </div>
+    </div>
+</div>
+<div class="content pad-lr p12-cont" style="padding-bottom: 0px;">
+    <div class="p12-left shadow">
+        <div class="p12-left-tit">个人中心</div>
+        <ul class="p12-left-ul">
+            <li ><a href="release.html">我的发布</a></li>
+            <li ><a href="info.html">个人资料</a></li>
+            <li ><a href="auth.html">认证管理</a></li>
+            <li><a href="javascript:alert('客服电话:'+'0857-6337257')">联系客服</a></li>
+            <li ><a href="liuyankehu.html">留言客户</a></li>
+            <li ><a href="setting.html">密码设置</a></li> 
+        </ul>
+    </div>
+</div>
+<div class="content pad-lr p12-cont" style="padding-top: 0px;">
+<div class="p12-right shadow">
+    <div class="p12-right-tit"><span>发布行业资讯</span> <a href="addinfo.html">发布搬家公司</a></div>
+    <div class="p12-right-cont p15-right-cont">
+        <form action="" method="post" id="form">
+            <ul>
+                <li>
+                    <p class="p12-li-tit"><span>*</span> 标题</p>
+                    <input type="text" class="p11-input" placeholder="请填写搬家行业相关资讯文章标题" name="title">
+                </li>
+                <li class="p16-align-start">
+                    <p class="p12-li-tit"><span>*</span> 内容</p>
+                    <script id="content" name="content" type="text/plain"></script>
+<!-- 引入ueditor的js代码 -->
+<script src="/static/bingher/ueditor/ueditor.config.js"></script>
+<script src="/static/bingher/ueditor/ueditor.all.js"></script>
+<script>
+    //ueditor代码
+    var ue = UE.getEditor("content",{"serverUrl":"\/ueditor\/index","UEDITOR_HOME_URL":"\/static\/bingher\/ueditor\/","initialFrameHeight":600,"autoHeightEnabled":true,"maximumWords":200000,"initialContent":""});
+</script>                </li>
+                <li>
+                    <p class="p12-li-tit"><span>*</span> 详细地址</p>
+                    <select class="p11-s-input" id='sheng' name="province" onChange="change(this,1)">
+                        <option value="">选择省 </option>
+                                                <option value="1">北京 </option>
+                                                <option value="2">上海 </option>
+                                                <option value="3">重庆 </option>
+                                                <option value="4">天津 </option>
+                                                <option value="15">广东 </option>
+                                                <option value="25">广西 </option>
+                                                <option value="28">安徽 </option>
+                                                <option value="40">四川 </option>
+                                                <option value="42">浙江 </option>
+                                                <option value="45">江苏 </option>
+                                                <option value="48">湖北 </option>
+                                                <option value="50">山东 </option>
+                                                <option value="52">河南 </option>
+                                                <option value="55">福建 </option>
+                                                <option value="58">云南 </option>
+                                                <option value="60">贵州 </option>
+                                                <option value="697">甘肃 </option>
+                                                <option value="713">海南 </option>
+                                                <option value="1463">黑龙江 </option>
+                                                <option value="1518">湖南 </option>
+                                                <option value="1553">河北 </option>
+                                                <option value="1635">江西 </option>
+                                                <option value="1657">吉林 </option>
+                                                <option value="1674">辽宁 </option>
+                                                <option value="1695">宁夏 </option>
+                                                <option value="1701">内蒙古 </option>
+                                                <option value="1715">青海 </option>
+                                                <option value="1796">山西 </option>
+                                                <option value="1815">陕西 </option>
+                                                <option value="1860">新疆 </option>
+                                                <option value="1880">西藏 </option>
+                                            </select>
+                    <select class="p11-s-input" id='shi' name="city" onChange="change(this,2)">
+                        <option value="">选择市 </option>
+                    </select>
+                    <select class="p11-s-input" id='qu' name="area">
+                        <option value="0">选择区 </option>
+                    </select>
+                    <input type="text" class="p11-input p11-input-2" name="address" placeholder="请输入具体的地址">
+                </li>
+            </ul>
+            <p style="font-size: 20px;margin:15px 10px;font-weight: bold">注意：发布搬家资讯需支付<span style="color:red;">9.8</span>元,支付后不需要审核将会直接发布</p>            <div class="p12-btn p11-btn">
+                <a href="javascript:;" onclick="form();">发布</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="footer">
+    <div class="foot-top pad-lr">
+
+        <div class="flex align-center justify-between">
+
+            <div>
+
+                <div class="foot-top-box">
+
+                    <div class="foot-top-tit">关于我们</div>
+
+                    <ul class="foot-top-ul">
+
+                        
+                        <li><a href="https://bj.qgbjvip.com/introduction.html">公司介绍</a></li>
+
+                        
+                        <li><a href="https://bj.qgbjvip.com/culture.html">企业文化</a></li>
+
+                        
+                        <li><a href="https://bj.qgbjvip.com/legal.html">法律申明和隐私条款</a></li>
+
+                        
+                        <li><a href="https://bj.qgbjvip.com/agreement.html">用户协议</a></li>
+
+                        
+                        <li><a href="https://bj.qgbjvip.com/joinus.html">招贤纳士</a></li>
+
+                        
+                    </ul>
+
+                </div>
+
+                <div class="foot-top-box foot-top-box2">
+
+                    <div class="foot-top-tit">服务分类</div>
+
+                    <ul class="foot-top-ul">
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-2-0-0-0-0-1.html" rel="nofollow"}>居民搬家</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-3-0-0-0-0-1.html" rel="nofollow"}>公司搬家</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-4-0-0-0-0-1.html" rel="nofollow"}>小型搬家</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-5-0-0-0-0-1.html" rel="nofollow"}>长途搬家</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-6-0-0-0-0-1.html" rel="nofollow"}>空调移机</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-7-0-0-0-0-1.html" rel="nofollow"}>设备拆迁</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-8-0-0-0-0-1.html" rel="nofollow"}>起重吊装</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-9-0-0-0-0-1.html" rel="nofollow"}>搬家搬场</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-10-0-0-0-0-1.html" rel="nofollow"}>钢琴搬运</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-11-0-0-0-0-1.html" rel="nofollow"}>家具拆装</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-12-0-0-0-0-1.html" rel="nofollow"}>搬运人力</a>
+
+                        </li>
+
+                        
+                        <li>
+
+                            <a href="https://bj.qgbjvip.com/product-13-0-0-0-0-1.html" rel="nofollow"}>国际搬家</a>
+
+                        </li>
+
+                        
+
+
+                    </ul>
+
+                </div>
+
+                <div class="foot-top-box">
+
+                    <div class="foot-top-tit">商业合作</div>
+
+                    <ul class="foot-top-ul">
+
+                        <li><a href="https://bj.qgbjvip.com/user/index.html">商家入驻</a></li>
+
+                        <li><a href="https://bj.qgbjvip.com/user/addinfo.html">信息发布</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="foot-top-box" style="margin-right: 0">
+
+                    <div class="foot-top-tit">联系我们</div>
+
+                    <ul class="foot-top-ul">
+
+                        <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2830801730&site=qq&menu=yes" target="_blank">客服QQ：2830801730</a></li>
+
+                        <li><a>邮箱：zsbb168@163.com</a></li>
+
+                        <li><a>违法信息举报邮箱：shansheng168@163.com</a></li>
+
+                        <li><a>侵权投诉邮箱：H168vip@163.com</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="foot-top-box3 flex align-center">
+
+                <div class="foot-top-box3-div">
+
+                    <p>微信扫一扫</p>
+
+                    <p>获取更多资讯</p>
+
+                </div>
+
+                <img width="121px" height="121" src="https://bj.qgbjvip.com/uploads/20200530/f6a557a3b6e536b9c669d0e16594bb75.jpg" alt="巧瓜搬家网">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="clear"></div>
+
+<div class="foot-bottom" style="margin-top: 20px">
+
+    <p class="foot-bottom-p1">贵州达月乐网络科技有限公司版权所有 <a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">黔ICP备18004443号-5 </a> 北京巧瓜搬家网 Copyright © 2020, All Rights Reserved </p>
+
+    <p class="foot-bottom-p1">关键词：<a href="/">北京搬家公司</a>
+
+        <span><a href="https://bj.qgbjvip.com/">北京搬家网</a></span>
+
+        <span><a href="https://bj.qgbjvip.com/">北京搬家公司网</a></span>
+
+        <span><a href="https://bj.qgbjvip.com/">北京搬家</a></span>
+
+        <span><a href="https://bj.qgbjvip.com/">北京巧瓜搬家网</a></span>
+
+    </p>
+
+</div>
+
+
+</div>
+<script src="/static/plugins/layui/layui.js"></script>
+<script src="/template/qgbj/index/js/jquery.js"></script>
+<script src="/template/qgbj/index/js/swiper.min.js"></script>
+<script>
+    function form()
+    {
+        $('form').submit();
+    }
+    layui.use('form', function(){
+        var form = layui.form;
+        form.render();
+    });
+    $('body').on('click', '.p11-pic-03', function () {
+        $(this).parent('.p11-pos').remove()
+    })
+    function change(obj,type){
+        $.post("/changeCity.html",{"id":obj.value,"type":type,act:'area'},function(res){
+            if(type == 1){
+                if(obj.value>0){
+                    $("#shi").html(res);
+                    $("#qu").html("<option value=''>选择区</option>");
+                }else{
+                    $("#shi").html("<option value=''>选择市</option>");
+                    $("#qu").html("<option value=0>选择区</option>");
+                }
+            }else if(type ==2){
+                if(obj.value>0){
+                    $("#qu").html(res);
+                }else{
+                    $("#qu").html("<option value=0>选择区</option>");
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>
