@@ -16,10 +16,10 @@
 					<p class="mb-0 p-2"> <b>欢迎进入北京巧瓜搬家网</b>　 <span class="text-danger">北京</span> </p>
 					<ul class="head-top-ul mb-0">
 						<li>
-							<p class="mb-0 p-2 text-danger">今天是 2020年08月31日 星期一</p>
+							<p class="mb-0 p-2 text-danger">今天是 <span id="mytime"></span></p>
 						</li>
-						<li><a href="login.html">登录</a>|</li>
-						<li><a href="register.html">注册</a>|</li>
+						<li class="loginregsiter"><a href="login.html">登录</a>|</li>
+						<li class="loginregsiter"><a href="register.html">注册</a>|</li>
 						<li class="index-tel">
 							<div class="index-ewm"><img src="images/af75df6a293181ef8c533718d934de4e.png" alt="巧瓜搬家网"><span></span></div>
 						<li><a title="24小时客服电话">24小时客服电话：0857-6337257</a></li>
@@ -30,8 +30,8 @@
 				<div class="logo"><a href="#"><img src="images/eb398ea0f162ef72eedad803699a0db1.png" width="221" height="52" alt="北京巧瓜搬家信息网"></a></div>
 				<div class="head-search">
 					<form action="search.html" id="searchForm"> <input type="text" placeholder="请输入关键词进行搜索" name="search"> <a class="head-search-a"
-						 href="javascript:;" style="float: right;" onClick="$('#searchForm').submit()"><img src="images/home_search.png"
-							 width="17" height="17" alt></a> </form>
+						 href="javascript:;" style="float: right;"><img src="images/home_search.png" width="17" height="17" alt></a>
+					</form>
 					<div class="head-search-ul">
 						<ul>
 							<li><a href="product.html" class="text-danger">居民搬家</a><span>|</span></li>
@@ -115,23 +115,24 @@
 					</ul>
 					<div class="position-relative"> <a href="addinfo.html" class="rzbutton">商家入驻</a>
 						<div class="rightinfo position-absolute ">
-							<div class="d-flex py-4 align-items-center justify-content-center"> <img src="images/home_pic_11.png" alt class="mr-avatar">
+							<div class="d-flex py-4 align-items-center justify-content-center mybtn"> 
+								<img src="images/home_pic_11.png" alt class="mr-avatar">
 								<div class="p1-ban-right">
-									<p>Hi,下午好！</p>
+									<p>Hi,<span id="username"></span> 下午好！</p>
 									<p>欢迎来到北京巧瓜搬家网</p>
 									<p> </p>
 								</div>
 							</div>
-							<div class="p1-ban-btn text-center mb-3"> <a href="login.html">登录</a> <a href="register.html">注册</a> </div>
+							<div class="p1-ban-btn text-center mb-3 loginregsiter"> <a href="login.html">登录</a> <a href="register.html">注册</a> </div>
 							<div class="p1-gg">
 								<ul class="p1-gg-nav">
 									<li class="p1-gg-active">公告</li>
 								</ul>
 								<ul class="p1-gg-cont">
-									<li><a href="#">欢迎入驻</a></li>
-									<li><a href="#">搬家注意事项</a></li>
-									<li><a href="#">搬家方式</a></li>
-									<li><a href="#">搬家公司收费标准</a></li>
+									<li><a href="javascript:;">欢迎入驻</a></li>
+									<li><a href="javascript:;">搬家注意事项</a></li>
+									<li><a href="javascript:;">搬家方式</a></li>
+									<li><a href="javascript:;">搬家公司收费标准</a></li>
 								</ul>
 							</div>
 							<div class="p1-gg">
@@ -262,91 +263,27 @@
 		<div class="container d-flex justify-content-between align-items-center flex-wrap my-2 border-bottom">
 			<div class="index-news my-2">
 				<div class="index-news-tit d-flex justify-content-between align-items-center pb-2">
-					<h2 class="font-weight-bold"><span>&nbsp;</span>北京搬家资讯</h2> <a href="https://bj.qgbjvip.com/zixun.html" class="more-button">更多信息</a>
+					<h2 class="font-weight-bold"><span>&nbsp;</span>北京搬家资讯</h2> <a href="zixun.html" class="more-button">更多信息</a>
 				</div>
-				<ul class="index-news-ul pl-0">
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4876.html" title="北京西城区搬家哪个好？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京西城区搬家哪个好？ <img src="images/home_right.png"
-							 alt="北京西城区搬家哪个好？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4873.html" title="北京东城区搬家公司电话怎么寻找？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京东城区搬家公司电话怎么寻找？ <img src="images/home_right.png"
-							 alt="北京东城区搬家公司电话怎么寻找？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4870.html" title="北京东城区搬家公司费用是多少？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京东城区搬家公司费用是多少？ <img src="images/home_right.png"
-							 alt="北京东城区搬家公司费用是多少？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4867.html" title="北京东城区搬家哪家好？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京东城区搬家哪家好？ <img src="images/home_right.png"
-							 alt="北京东城区搬家哪家好？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4864.html" title="北京东城区搬家价格是多少？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京东城区搬家价格是多少？ <img src="images/home_right.png"
-							 alt="北京东城区搬家价格是多少？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-				</ul>
+				<div id="myzixun"></div>
 			</div>
 			<div class="index-news my-2">
 				<div class="index-news-tit d-flex justify-content-between align-items-center pb-2">
-					<h2 class="font-weight-bold"><span>&nbsp;</span>北京搬家常识</h2> <a href="https://bj.qgbjvip.com/changshi.html" class="more-button">更多信息</a>
+					<h2 class="font-weight-bold"><span>&nbsp;</span>北京搬家常识</h2> <a href="changshi.html" class="more-button">更多信息</a>
 				</div>
-				<ul class="index-news-ul pl-0">
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4874.html" title="北京西城区搬家价格是多少？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京西城区搬家价格是多少？ <img src="images/home_right.png"
-							 alt="北京西城区搬家价格是多少？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4871.html" title="北京东城区搬家公司哪个好？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京东城区搬家公司哪个好？ <img src="images/home_right.png"
-							 alt="北京东城区搬家公司哪个好？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4868.html" title="北京东城区搬家电话怎么寻找？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京东城区搬家电话怎么寻找？ <img src="images/home_right.png"
-							 alt="北京东城区搬家电话怎么寻找？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4865.html" title="北京东城区搬家费用是多少？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京东城区搬家费用是多少？ <img src="images/home_right.png"
-							 alt="北京东城区搬家费用是多少？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/3415.html" title="北京搬家公司的服务" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京搬家公司的服务 <img src="images/home_right.png"
-							 alt="北京搬家公司的服务" class="index-news-ul-rightimg position-absolute"> </a> </li>
-				</ul>
+				<div id="mychangshi"></div>
 			</div>
 			<div class="index-news my-2">
 				<div class="index-news-tit d-flex justify-content-between align-items-center pb-2">
-					<h2 class="font-weight-bold"><span>&nbsp;</span>北京搬家吉日</h2> <a href="https://bj.qgbjvip.com/jiri.html" class="more-button">更多信息</a>
+					<h2 class="font-weight-bold"><span>&nbsp;</span>北京搬家吉日</h2> <a href="jiri.html" class="more-button">更多信息</a>
 				</div>
-				<ul class="index-news-ul pl-0">
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4854.html" title="2020年10月搬家吉日" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 2020年10月搬家吉日 <img src="images/home_right.png"
-							 alt="2020年10月搬家吉日" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4614.html" title="2020年9月搬家吉日" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 2020年9月搬家吉日 <img src="images/home_right.png"
-							 alt="2020年9月搬家吉日" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/3365.html" title="2020年8月搬家吉日" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 2020年8月搬家吉日 <img src="images/home_right.png"
-							 alt="2020年8月搬家吉日" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/3364.html" title="2020年7月搬家吉日" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 2020年7月搬家吉日 <img src="images/home_right.png"
-							 alt="2020年7月搬家吉日" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/2453.html" title="2020年6月搬家吉日" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 2020年6月搬家吉日 <img src="images/home_right.png"
-							 alt="2020年6月搬家吉日" class="index-news-ul-rightimg position-absolute"> </a> </li>
-				</ul>
+				<div id="myjiri"></div>
 			</div>
 			<div class="index-news my-2">
 				<div class="index-news-tit d-flex justify-content-between align-items-center pb-2">
-					<h2 class="font-weight-bold"><span>&nbsp;</span>北京搬家问答</h2> <a href="https://bj.qgbjvip.com/wenda.html" class="more-button">更多信息</a>
+					<h2 class="font-weight-bold"><span>&nbsp;</span>北京搬家问答</h2> <a href="wenda.html" class="more-button">更多信息</a>
 				</div>
-				<ul class="index-news-ul pl-0">
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4875.html" title="北京西城区搬家费用是多少？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京西城区搬家费用是多少？ <img src="images/home_right.png"
-							 alt="北京西城区搬家费用是多少？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/1111.html" title="北京哪个搬家公司比较好？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京哪个搬家公司比较好？ <img src="images/home_right.png"
-							 alt="北京哪个搬家公司比较好？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/4869.html" title="北京东城区搬家公司价格是多少？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京东城区搬家公司价格是多少？ <img src="images/home_right.png"
-							 alt="北京东城区搬家公司价格是多少？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/3722.html" title="北京搬家公司排行榜去哪里找？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京搬家公司排行榜去哪里找？ <img src="images/home_right.png"
-							 alt="北京搬家公司排行榜去哪里找？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-					<li class="py-2 border-top"> <a href="https://bj.qgbjvip.com/article/3726.html" title="北京出租屋搬家有哪些经验教训？" target="_blank"
-						 class="text-dark position-relative d-flex align-items-center pr-2"> <span></span> 北京出租屋搬家有哪些经验教训？ <img src="images/home_right.png"
-							 alt="北京出租屋搬家有哪些经验教训？" class="index-news-ul-rightimg position-absolute"> </a> </li>
-				</ul>
+				<div id="mywenda"></div>
 			</div>
 		</div>
 		<div class="container my-4">
@@ -462,17 +399,49 @@
 		<script src="js/lunbo.js"></script>
 		<script>
 			$('.p1-gg-nav li').click(function() {
-					$('.p1-gg-nav li').removeClass('p1-gg-active');
-					$(this).addClass('p1-gg-active');
-				}) $(function() {
-						var oul = $('.wrap ul');
-						var oulHtml = oul.html();
-						oul.html(oulHtml + oulHtml) var timeId = null;
-						var ali = $('.wrap ul li');
-						var aliWidth = ali.eq(0).width();
-						var aliSize = ali.size();
-						var ulWidth = aliWidth * aliSize;
-						oul.width(ulWidth); //1600px        var speed = -2;        function slider(){            if(speed<0){                if(oul.css('left')==-ulWidth/2+'px'){                    oul.css('left',0);                }                oul.css('left','+=-2px');            }            if(speed>0){                if(oul.css('left')=='0px'){                    oul.css('left',-ulWidth/2+'px');                }                oul.css('left','+='+speed+'px');            }        }        timeId = setInterval(slider,30);        $('.wrap').mouseover(function(){            // clearInterval()函数的作用是用来清除定时器            clearInterval(timeId);        });        $('.wrap').mouseout(function(){            timeId = setInterval(slider,30);        });        $('.goLeft').click(function(){            speed=-2;        });        $('.goRight').click(function(){            speed=2;        });    });
+				$('.p1-gg-nav li').removeClass('p1-gg-active');
+				$(this).addClass('p1-gg-active');
+			})
+			$(function() {
+				var oul = $('.wrap ul');
+				var oulHtml = oul.html();
+				oul.html(oulHtml + oulHtml) 
+				var timeId = null;
+				var ali = $('.wrap ul li');
+				var aliWidth = ali.eq(0).width();
+				var aliSize = ali.size();
+				var ulWidth = aliWidth * aliSize;
+				oul.width(ulWidth); //1600px        
+				var speed = -2;
+
+				function slider() {
+					if (speed < 0) {
+						if (oul.css('left') == -ulWidth / 2 + 'px') {
+							oul.css('left', 0);
+						}
+						oul.css('left', '+=-2px');
+					}
+					if (speed > 0) {
+						if (oul.css('left') == '0px') {
+							oul.css('left', -ulWidth / 2 + 'px');
+						}
+						oul.css('left', '+=' + speed + 'px');
+					}
+				}
+				timeId = setInterval(slider, 30);
+				$('.wrap').mouseover(function() { // clearInterval()函数的作用是用来清除定时器            
+					clearInterval(timeId);
+				});
+				$('.wrap').mouseout(function() {
+					timeId = setInterval(slider, 30);
+				});
+				$('.goLeft').click(function() {
+					speed = -2;
+				});
+				$('.goRight').click(function() {
+					speed = 2;
+				});
+			});
 		</script>
 		<script>
 			(function() {
@@ -498,21 +467,31 @@
 		</script>
 		<script>
 			$('.fl-hidebox li a').hover(function() {
-					$(this).css('color', '#e60012');
-					var id = $(this).data('id');
-					$(this).children().children('img').attr('src', '/template/qgbj/index/images/home_fl_' + id + 'A.png')
-				}, function() {
-					$(this).css('color', '#333');
-					var id = $(this).data('id');
-					$(this).children().children('img').attr('src', '/template/qgbj/index/images/home_fl_' + id + '.png')
-				}) $('body').append(`    `) $('.r-box').hover(function() {
-					$(this).css('background', '#e60012') var src = $(this).children('img').attr('url');
-					$(this).children('img').attr('src')
-				}, function() {
-					$(this).css('background', '#fefefe') var src = $(this).children('img').attr('url');
-					$(this).children('img').attr('src')
-				}) $('.r-icon-04').click(function(e) {
-						var speed = 200; //滑动的速度        $('body,html').animate({ scrollTop: 0 }, speed);        return false;    })
+				$(this).css('color', '#e60012');
+				var id = $(this).data('id');
+				$(this).children().children('img').attr('src', '/template/qgbj/index/images/home_fl_' + id + 'A.png')
+			}, function() {
+				$(this).css('color', '#333');
+				var id = $(this).data('id');
+				$(this).children().children('img').attr('src', '/template/qgbj/index/images/home_fl_' + id + '.png')
+			})
+
+			$('.r-box').hover(function() {
+				$(this).css('background', '#e60012')
+				var src = $(this).children('img').attr('url');
+				$(this).children('img').attr('src')
+			}, function() {
+				$(this).css('background', '#fefefe')
+				var src = $(this).children('img').attr('url');
+				$(this).children('img').attr('src')
+			})
+			$('.r-icon-04').click(function(e) {
+				var speed = 200; //滑动的速度        
+				$('body,html').animate({
+					scrollTop: 0
+				}, speed);
+				return false;
+			})
 		</script>
 		<script type="text/javascript">
 			function yy() {
@@ -531,6 +510,12 @@
 					alert(res.msg);
 				})
 			}
+		</script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/data.tools.js"></script>
+		<script src="js/data.dispose.js"></script>
+		<script>
+			getIndexMessage();
 		</script>
 	</body>
 </html>

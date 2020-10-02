@@ -35,9 +35,9 @@
                 <li><p class="mb-0 p-2 text-danger">今天是 2020年08月31日 星期一</p></li>
 
                 
-              <li><a href="login.html">登录</a>|</li>
+              <li class="loginregsiter"><a href="login.html">登录</a>|</li>
 
-                <li><a href="register.html">注册</a>|</li>
+                <li class="loginregsiter"><a href="register.html">注册</a>|</li>
 
                 
                 <li class="index-tel">
@@ -353,7 +353,7 @@
 
                 </div>
 
-                <div class="p1-ban-btn text-center mb-3">
+                <div class="p1-ban-btn text-center mb-3 loginregsiter">
 
                     <a href="login.html">登录</a>
 
@@ -1144,13 +1144,13 @@
 
         if(num == 1) {
 
-            $(this).children('img').attr('src','/template/qgbj/index/images/p11_select_yes.png');
+            $(this).children('img').attr('src','images/p11_select_yes.png');
 
             $(this).attr('num',2)
 
         }else{
 
-            $(this).children('img').attr('src','/template/qgbj/index/images/p5_select.png');
+            $(this).children('img').attr('src','images/p5_select.png');
 
             $(this).attr('num',1)
 

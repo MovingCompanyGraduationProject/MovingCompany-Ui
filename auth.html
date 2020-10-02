@@ -1,285 +1,259 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>认证管理-巧瓜搬家网</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
-</head>
-<style type="text/css">
-    .layui-btn {
-        display: none;
-    }
-</style>
-<body>
-<div class="header">
-    <div class="head-top flex align-center justify-between pad-lr">
-        <p><span></span><img width="11" height="13" src="images/home_dw.png" alt=""> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
-        <ul class="head-top-ul p15-head-ul">
-            <li><a href="javascript:;">用户名</a></li>
-            <li><a href="logout.html">退出</a></li>
-            <li>
-                <a href="gerenzhongxin">个人中心 <img src="images/p15_bot.png" alt=""></a>
-                <ul class="smul" style="margin-left: -32px;">
-                    <li><a href="release.html">我的发布</a></li>
-                    <li><a href="info.html">个人资料</a></li>
-                    <li><a href="auth.html">认证管理</a></li> 
-                    <li><a href="setting.html">密码设置</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="p12-head flex justify-between align-center pad-lr">
-        <img src="images/s_logo1.png" width="169" height="40" alt="">
-        <div class="p12-head-right flex">
-            <a href="addinfo.html" class="p12-fbxx">发布信息</a>
-        </div>
-    </div>
-</div>
-<div class="content pad-lr p12-cont" style="padding-bottom: 0px;">
-    <div class="p12-left shadow">
-        <div class="p12-left-tit">个人中心</div>
-        <ul class="p12-left-ul">
-            <li ><a href="release.html">我的发布</a></li>
-            <li ><a href="info.html">个人资料</a></li>
-            <li ><a href="auth.html">认证管理</a></li>
-            <li><a href="javascript:alert('客服电话:'+'0857-6337257')">联系客服</a></li>
-            <li ><a href="liuyankehu.html">留言客户</a></li>
-            <li ><a href="setting.html">密码设置</a></li> 
-        </ul>
-    </div>
-</div>
-<div class="content pad-lr p12-cont" style="padding-top: 0px;">
-<div class="p12-right shadow">
-    <div class="p12-right-tit"><span>认证管理</span></div>
-    <div class="p13-right-cont">
-        <ul>
-            <li>
-                <div class="p13-r-left flex align-center">
-                    <img src="images/p13_pic01_1.png" alt="">                    <div class="p13-r-div">
-                        <p>身份证认证</p>
-                        <p>需清晰的手持身份证照片，3-5个工作日完成审核</p>
-                    </div>
-                </div>
-                                <a class="p13-no" href="javascript:;" onclick="showbox('idcard')">去认证</a>
-                                            </li>
-            <li>
-                <div class="p13-r-left flex align-center">
-                    <img src="images/p13_pic02.png" alt="">                    <div class="p13-r-div">
-                        <p>营业执照认证</p>
-                        <p>请在明亮地方认证，简单便捷、实时通过</p>
-                    </div>
-                </div>
-                                <a class="p13-no" href="javascript:;" onclick="showbox('businesslicence')">去认证</a>
-                                            </li>
-        </ul>
-    </div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="footer">
-    <div class="foot-top pad-lr">
-
-        <div class="flex align-center justify-between">
-
-            <div>
-
-                <div class="foot-top-box">
-
-                    <div class="foot-top-tit">关于我们</div>
-
-                    <ul class="foot-top-ul">
-
-                        
-                        <li><a href="#">公司介绍</a></li>
-
-                        
-                        <li><a href="#">企业文化</a></li>
-
-                        
-                        <li><a href="#">法律申明和隐私条款</a></li>
-
-                        
-                        <li><a href="#">用户协议</a></li>
-
-                        
-                        <li><a href="#">招贤纳士</a></li>
-
-                        
-                    </ul>
-
-                </div>
-
-                <div class="foot-top-box foot-top-box2">
-
-                    <div class="foot-top-tit">服务分类</div>
-
-                    <ul class="foot-top-ul">
-
-                        
-                        <li>
-
-                            <a href="product.html" rel="nofollow"}>居民搬家</a>
-
-                        </li>
-
-                        
-                        <li>
-
-                            <a href="product.html" rel="nofollow"}>公司搬家</a>
-
-                        </li>
-
-                        
-                        <li>
-
-                            <a href="product.html" rel="nofollow"}>小型搬家</a>
-
-                        </li>
-
-                        
-                        <li>
-
-                            <a href="product.html" rel="nofollow"}>长途搬家</a>
-
-                        </li>
-
-                        
-                        <li>
-
-                            <a href="product.html" rel="nofollow"}>空调移机</a>
-
-                        </li>
-
-                        
-                        <li>
-
-                            <a href="product.html" rel="nofollow"}>设备拆迁</a>
-
-                        </li>
-
-                      
-
-                    </ul>
-
-                </div>
-
-                <div class="foot-top-box">
-
-                    <div class="foot-top-tit">商业合作</div>
-
-                    <ul class="foot-top-ul">
-
-                        <li><a href="addinfo.html">商家入驻</a></li>
-
-                        <li><a href="addinfo.html">信息发布</a></li>
-
-                    </ul>
-
-                </div>
-
-                <div class="foot-top-box" style="margin-right: 0">
-
-                    <div class="foot-top-tit">联系我们</div>
-
-                    <ul class="foot-top-ul">
-
-                        <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2830801730&site=qq&menu=yes" target="_blank">客服QQ：2830801730</a></li>
-
-                        <li><a>邮箱：zsbb168@163.com</a></li>
-
-                        <li><a>违法信息举报邮箱：shansheng168@163.com</a></li>
-
-                        <li><a>侵权投诉邮箱：H168vip@163.com</a></li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-            <div class="foot-top-box3 flex align-center">
-
-                <div class="foot-top-box3-div">
-
-                    <p>微信扫一扫</p>
-
-                    <p>获取更多资讯</p>
-
-                </div>
-
-                <img width="121px" height="121" src="https://bj.qgbjvip.com/uploads/20200530/f6a557a3b6e536b9c669d0e16594bb75.jpg" alt="巧瓜搬家网">
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-
-
-
-    <div class="clear"></div>
-
-<div class="foot-bottom" style="margin-top: 20px">
-
-    <p class="foot-bottom-p1">贵州达月乐网络科技有限公司版权所有 <a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">黔ICP备18004443号-5 </a> 北京巧瓜搬家网 Copyright © 2020, All Rights Reserved </p>
-
-    <p class="foot-bottom-p1">关键词：<a href="/">北京搬家公司</a>
-
-        <span><a href="https://bj.qgbjvip.com/">北京搬家网</a></span>
-
-        <span><a href="https://bj.qgbjvip.com/">北京搬家公司网</a></span>
-
-        <span><a href="https://bj.qgbjvip.com/">北京搬家</a></span>
-
-        <span><a href="https://bj.qgbjvip.com/">北京巧瓜搬家网</a></span>
-
-    </p>
-
-</div>
-
-
-</div>
-<script src="/static/plugins/layui/layui.js"></script>
-<script src="/template/qgbj/index/js/jquery.js"></script>
-<script src="/template/qgbj/index/js/swiper.min.js"></script>
-<script>
-    function form()
-    {
-        $('form').submit();
-    }
-    layui.use('form', function(){
-        var form = layui.form;
-        form.render();
-    });
-    $('body').on('click', '.p11-pic-03', function () {
-        $(this).parent('.p11-pos').remove()
-    })
-    function change(obj,type){
-        $.post("/changeCity.html",{"id":obj.value,"type":type,act:'area'},function(res){
-            if(type == 1){
-                if(obj.value>0){
-                    $("#shi").html(res);
-                    $("#qu").html("<option value=''>选择区</option>");
-                }else{
-                    $("#shi").html("<option value=''>选择市</option>");
-                    $("#qu").html("<option value=0>选择区</option>");
-                }
-            }else if(type ==2){
-                if(obj.value>0){
-                    $("#qu").html(res);
-                }else{
-                    $("#qu").html("<option value=0>选择区</option>");
-                }
-            }
-        })
-    }
-</script>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>认证管理-巧瓜搬家网</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+	</head>
+	<style type="text/css">
+		.layui-btn {
+			display: none;
+		}
+	</style>
+	<body>
+		<div class="header">
+			<div class="head-top flex align-center justify-between pad-lr">
+				<p><span></span><img width="11" height="13" src="images/home_dw.png" alt=""> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
+				<ul class="head-top-ul p15-head-ul">
+					<li><a href="javascript:;" id="username">用户名</a></li>
+					<li><a href="logout.html">退出</a></li>
+					<li> <a href="gerenzhongxin">个人中心 <img src="images/p15_bot.png" alt=""></a>
+						<ul class="smul" style="margin-left: -32px;">
+							<li><a href="release.html">我的发布</a></li>
+							<li><a href="info.html">个人资料</a></li>
+							<li><a href="auth.html">认证管理</a></li>
+							<li><a href="setting.html">密码设置</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="p12-head flex justify-between align-center pad-lr"> <img src="images/s_logo1.png" width="169" height="40"
+				 alt="">
+				<div class="p12-head-right flex"> <a href="addinfo.html" class="p12-fbxx">发布信息</a> </div>
+			</div>
+		</div>
+		<div class="content pad-lr p12-cont" style="padding-bottom: 0px;">
+			<div class="p12-left shadow">
+				<div class="p12-left-tit">个人中心</div>
+				<ul class="p12-left-ul">
+					<li><a href="release.html">我的发布</a></li>
+					<li><a href="info.html">个人资料</a></li>
+					<li><a href="auth.html">认证管理</a></li>
+					<li><a href="javascript:alert('客服电话:'+'0857-6337257')">联系客服</a></li>
+					<li><a href="liuyankehu.html">留言客户</a></li>
+					<li><a href="setting.html">密码设置</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content pad-lr p12-cont" style="padding-top: 0px;">
+			<div class="p12-right shadow">
+				<div class="p12-right-tit"><span>认证管理</span></div>
+				<div class="p13-right-cont">
+					<ul>
+						<li>
+							<div class="p13-r-left flex align-center"> <img src="images/p13_pic01_1.png" alt="">
+								<div class="p13-r-div">
+									<p>身份证认证</p>
+									<p>需清晰的手持身份证照片，3-5个工作日完成审核</p>
+								</div>
+							</div> <a class="p13-no" href="javascript:;" onclick="showbox('idcard')">去认证</a>
+						</li>
+						<li>
+							<div class="p13-r-left flex align-center"> <img src="images/p13_pic02.png" alt="">
+								<div class="p13-r-div">
+									<p>营业执照认证</p>
+									<p>请在明亮地方认证，简单便捷、实时通过</p>
+								</div>
+							</div> <a class="p13-no" href="javascript:;" onclick="showbox('businesslicence')">去认证</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer">
+			<div class="foot-top pad-lr">
+				<div class="flex align-center justify-between">
+					<div>
+						<div class="foot-top-box">
+							<div class="foot-top-tit">关于我们</div>
+							<ul class="foot-top-ul">
+								<li><a href="#">公司介绍</a></li>
+								<li><a href="#">企业文化</a></li>
+								<li><a href="#">法律申明和隐私条款</a></li>
+								<li><a href="#">用户协议</a></li>
+								<li><a href="#">招贤纳士</a></li>
+							</ul>
+						</div>
+						<div class="foot-top-box foot-top-box2">
+							<div class="foot-top-tit">服务分类</div>
+							<ul class="foot-top-ul">
+								<li> <a href="product.html" rel="nofollow" }>居民搬家</a> </li>
+								<li> <a href="product.html" rel="nofollow" }>公司搬家</a> </li>
+								<li> <a href="product.html" rel="nofollow" }>小型搬家</a> </li>
+								<li> <a href="product.html" rel="nofollow" }>长途搬家</a> </li>
+								<li> <a href="product.html" rel="nofollow" }>空调移机</a> </li>
+								<li> <a href="product.html" rel="nofollow" }>设备拆迁</a> </li>
+							</ul>
+						</div>
+						<div class="foot-top-box">
+							<div class="foot-top-tit">商业合作</div>
+							<ul class="foot-top-ul">
+								<li><a href="addinfo.html">商家入驻</a></li>
+								<li><a href="addinfo.html">信息发布</a></li>
+							</ul>
+						</div>
+						<div class="foot-top-box" style="margin-right: 0">
+							<div class="foot-top-tit">联系我们</div>
+							<ul class="foot-top-ul">
+								<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2830801730&site=qq&menu=yes" target="_blank">客服QQ：2830801730</a></li>
+								<li><a>邮箱：zsbb168@163.com</a></li>
+								<li><a>违法信息举报邮箱：shansheng168@163.com</a></li>
+								<li><a>侵权投诉邮箱：H168vip@163.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="foot-top-box3 flex align-center">
+						<div class="foot-top-box3-div">
+							<p>微信扫一扫</p>
+							<p>获取更多资讯</p>
+						</div> <img width="121px" height="121" src="https://bj.qgbjvip.com/uploads/20200530/f6a557a3b6e536b9c669d0e16594bb75.jpg"
+						 alt="巧瓜搬家网">
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="foot-bottom" style="margin-top: 20px">
+				<p class="foot-bottom-p1">贵州达月乐网络科技有限公司版权所有 <a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">黔ICP备18004443号-5
+					</a> 北京巧瓜搬家网 Copyright © 2020, All Rights Reserved </p>
+				<p class="foot-bottom-p1">关键词：<a href="/">北京搬家公司</a> <span><a href="https://bj.qgbjvip.com/">北京搬家网</a></span> <span><a
+						 href="https://bj.qgbjvip.com/">北京搬家公司网</a></span> <span><a href="https://bj.qgbjvip.com/">北京搬家</a></span> <span><a
+						 href="https://bj.qgbjvip.com/">北京巧瓜搬家网</a></span> </p>
+			</div>
+		</div>
+		<div class="p13-hidebox" id="idcard" >
+			<div style="width:100%;height:100%;" class="flex align-center justify-center">
+				<div class="p13-hb-box">
+					<div class="p13-hb-tit">身份认证 <span class="p13-close" onclick="closebox('idcard')">×</span></div>
+					<form action="" method="post" id="form">
+						<ul class="p13-hb-ul">
+							<li>
+								<span>真实姓名：</span>
+								<input type="text" class="ipt1" name="name">
+							</li>
+							<li>
+								<span>身份证号：</span>
+								<input type="text" class="ipt1" name="number">
+							</li>
+							<li>
+								<span>上传证件信息：</span>照片仅支持jpg，gif，bmp，png格式，大小不超过2MB
+							</li>
+							<li>
+								<label class="p13-label-1 margin-top" for="z_pic">
+									<input type="hidden" class="ipt1" name="image1" id="z_pic_1">
+									<img class="p13-img1 z_pic" src="images/p13-sfz1.png" alt="">
+									<button type="button" class="layui-btn" id="z_pic">上传图片</button><input class="layui-upload-file" type="file"
+									 accept="undefined" name="file">
+								</label>
+							</li>
+							<li>
+								<label class="p13-label-2" for="f_pic">
+									<input type="hidden" class="ipt1" name="image2">
+									<img class="p13-img2 f_pic" src="images/p13-sfz1.png" alt="">
+									<button type="button" class="layui-btn" id="f_pic">上传图片</button><input class="layui-upload-file" type="file"
+									 accept="undefined" name="file">
+								</label>
+							</li>
+							<li>
+								<input type="hidden" class="ipt1" name="type" value="0">
+								<div class="p13-btn" onclick="closebox('idcard')">
+									<a href="javascript:;" onclick="form();">确定</a>
+								</div>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="p13-hidebox" id="businesslicence" >
+			<div style="width:100%;height:100%;" class="flex align-center justify-center">
+				<div class="p13-hb-box">
+					<div class="p13-hb-tit">营业执照认证 <span class="p13-close" onclick="closebox('businesslicence')">×</span></div>
+					<form action="" method="post" id="form1">
+						<ul class="p13-hb-ul">
+							<li>
+								<span>公司名称：</span>
+								<input type="text" class="ipt1" name="name">
+							</li>
+							<li>
+								<span>信用代码：</span>
+								<input type="text" class="ipt1" name="number">
+							</li>
+							<li>
+								<span>上传证件信息：</span>照片仅支持jpg，gif，bmp，png格式，大小不超过2MB
+							</li>
+							<li>
+								<label class="p13-label-1 margin-top" for="z_pic1">
+									<input type="hidden" class="ipt1" name="image1" id="z_pic1_1">
+									<img class="p13-img1 z_pic1" src="images/p13-zz1.png" alt="">
+									<button type="button" class="layui-btn" id="z_pic1">上传图片</button><input class="layui-upload-file" type="file"
+									 accept="undefined" name="file">
+								</label>
+							</li>
+							<li>
+								<input type="hidden" class="ipt1" name="type" value="1">
+								<div class="p13-btn" onclick="closebox('businesslicence')">
+									<a href="javascript:;" onclick="form1();">确定</a>
+								</div>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="js/layui.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script>
+			function form() {
+				$('form').submit();
+			}
+			layui.use('form', function() {
+				var form = layui.form;
+				form.render();
+			});
+			$('body').on('click', '.p11-pic-03', function() {
+				$(this).parent('.p11-pos').remove()
+			})
+			function change(obj, type) {
+				$.post("/changeCity.html", {
+					"id": obj.value,
+					"type": type,
+					act: 'area'
+				}, function(res) {
+					if (type == 1) {
+						if (obj.value > 0) {
+							$("#shi").html(res);
+							$("#qu").html("<option value=''>选择区</option>");
+						} else {
+							$("#shi").html("<option value=''>选择市</option>");
+							$("#qu").html("<option value=0>选择区</option>");
+						}
+					} else if (type == 2) {
+						if (obj.value > 0) {
+							$("#qu").html(res);
+						} else {
+							$("#qu").html("<option value=0>选择区</option>");
+						}
+					}
+				})
+			}
+		</script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/data.tools.js"></script>
+		<script src="js/data.dispose.js"></script>
+	</body>
 </html>

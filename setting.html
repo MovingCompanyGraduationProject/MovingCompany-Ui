@@ -12,12 +12,12 @@
 <body>
 <div class="header">
     <div class="head-top flex align-center justify-between pad-lr">
-        <p><span></span><img width="11" height="13" src="/template/qgbj/index/images/home_dw.png" alt=""> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
+        <p><span></span><!-- <img width="11" height="13" src="/template/qgbj/index/images/home_dw.png" alt=""> --> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
         <ul class="head-top-ul p15-head-ul">
-            <li><a href="javascript:;">用户名</a></li>
-            <li><a href="logout.html">退出</a></li>
+            <li><a href="javascript:;" id="username"></a></li>
+            <li><a href="logout.html">退出登录</a></li>
             <li>
-                <a href="gerenzhongxin.html">个人中心 <img src="/template/qgbj/index/images/p15_bot.png" alt=""></a>
+                <a href="gerenzhongxin.html">个人中心 <img src="images/p15_bot.png" alt=""></a>
                 <ul class="smul" style="margin-left: -32px;">
                     <li><a href="release.html">我的发布</a></li>
                     <li><a href="info.html">个人资料</a></li>
@@ -283,6 +283,9 @@
 
 
 </div>
-<script src="/template/qgbj/index/js/jquery.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/data.tools.js"></script>
+<script src="js/data.dispose.js"></script>
 </body>
 </html>

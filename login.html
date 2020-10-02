@@ -13,8 +13,9 @@
 		<link rel="stylesheet" href="css/2.css">
 		<link rel="stylesheet" href="css/3.css">
 		<link rel="stylesheet" href="css/4.css">
-		<style>.newlogin-middle {
-			background-color: #1969FE;
+		<style>
+			.newlogin-middle {
+				background-color: #1969FE;
 			}
 		</style>
 		<style type="text/css">
@@ -97,122 +98,80 @@
 						<li><a href="register.html">注册</a>|</li>
 						<li class="index-tel">
 							<div class="index-ewm"><img src="images/af75df6a293181ef8c533718d934de4e.png" style="width:120px" alt="巧瓜搬家网"><span></span></div>
-
 						<li><a href="javascript:;" title="24小时客服电话">24小时客服电话：0857-6337257</a></li>
 					</ul>
 			</div>
 			<div class="p3-head pad-lr flex align-center justify-between">
-				<div class="logo">
-					<a href="/"> <img src="images/eb398ea0f162ef72eedad803699a0db1.png" width="221" height="52" alt></a>
+				<div class="logo"> <a href="/"> <img src="images/eb398ea0f162ef72eedad803699a0db1.png" width="221" height="52" alt></a>
 				</div>
-				<div class="p3-head-btn">
-					<a class="reg-backhome" href="index.html">返回首页</a>
-					没有账号，立即
-					<a href="register.html">注册</a>
+				<div class="p3-head-btn"> <a class="reg-backhome" href="index.html">返回首页</a> 没有账号，立即 <a href="register.html">注册</a>
 				</div>
 			</div>
 		</div>
 		<div class="newlogin-middle">
 			<div class="contWidth clearflow">
-				<div class="newlogin-left">
-					<img src="images/6ae009ac7f00f3022e1216e07ef85e27.jpeg" alt="巧瓜搬家网登录">
-				</div>
+				<div class="newlogin-left"> <img src="images/6ae009ac7f00f3022e1216e07ef85e27.jpeg" alt="巧瓜搬家网登录"> </div>
 				<div class="newlogin-right b-radius">
 					<ul class="login-nav clearflow">
 						<li class=" "><a>巧瓜搬家网登录</a></li>
-
 					</ul>
 					<div class="newlog-type-box">
 						<div class="newlog-type-cont" style="display:block;">
 							<div class="code-pass-changes" style="display: block">
-								<form  id="txlform" onsubmit="retrurn false">
-									<div class="basic-form-group b-radius ">
-										<i class="iconfont log-icon log-tel-icon"></i>
-										<div class="basic-input">
-											<input type="text" class="form-control basic-text-default new-tel-input" id="txtUserName" autocomplete="off"
-											 name="username">
-											<span class="input-notice">手机号/用户名</span>
-											<div class="input-tab">
-												<i class="iconfont  i-error"></i>
-											</div>
+								<form id="txlform" onsubmit="return false">
+									<div class="basic-form-group b-radius "> <i class="iconfont log-icon log-tel-icon"></i>
+										<div class="basic-input"> <input type="text" class="form-control basic-text-default new-tel-input" id="txtUserName"
+											 autocomplete="off" name="username" required="required"> <span class="input-notice">用户名</span>
+											<div class="input-tab"> <i class="iconfont  i-error"></i> </div>
 										</div>
 									</div>
 									<div class="errorText"></div>
-									<div class="basic-form-group b-radius">
-										<i class="iconfont log-icon log-tel-icon"></i>
-										<div class="basic-input">
-											<input type="password" class="form-control basic-text-default" id="txtPwd" autocomplete="off" name="password">
-											<span class="input-notice">密码</span>
-											<div class="input-tab">
-												<i class="iconfont  i-error"></i>
-											</div>
+									<div class="basic-form-group b-radius"> <i class="iconfont log-icon log-tel-icon"></i>
+										<div class="basic-input"> <input type="password" class="form-control basic-text-default" id="txtPwd"
+											 autocomplete="off" name="password" required="required"> <span class="input-notice">密码</span>
+											<div class="input-tab"> <i class="iconfont  i-error"></i> </div>
 										</div>
 									</div>
 									<div class="errorText"></div>
 									<div class="clearflow">
-										<div class="basic-form-group b-radius newlog-code">
-											<i class="iconfont log-icon log-code-icon"></i>
-											<div class="basic-input">
-												<input type="text" class="form-control basic-text-default " name="message_code">
-												<span class="input-notice">验证码</span>
-												<div class="input-tab">
-													<i class="iconfont  i-error"></i>
-												</div>
+										<div class="basic-form-group b-radius newlog-code"> <i class="iconfont log-icon log-code-icon"></i>
+											<div class="basic-input"> <input type="text" class="form-control basic-text-default " name="message_code" id="message_code"
+												 required="required"> <span class="input-notice">验证码</span>
+												<div class="input-tab"> <i class="iconfont  i-error"></i> </div>
 											</div>
-										</div>
-										<a class="message_code newlog-code-btn"><canvas id="canvas" style="width: 110px;height: 40px;" title="点击切换验证码"></canvas></a>
+										</div> <a class="message_code newlog-code-btn"><canvas id="canvas" style="width: 110px;height: 40px;" title="点击切换验证码"></canvas></a>
 									</div>
 									<div class="errorText"></div>
+									<div class="clearflow"> <a class="newlog-change-a">切换验证码登录</a></div>
+									<input type="submit" class="basic-btn-blue b-radius newmlog-btn txl-login" style="margin-bottom: 0px;" onclick="userlogin()"/><i class="weui-loading"></i>
+									<div class="newlog-bt-box clearflow" style="padding-top: 8px"> <a href="register.html">免费注册</a> <a href="resetpassword.html">忘记密码</a></div>
 								</form>
-								<div class="clearflow">
-									<a class="newlog-change-a">切换验证码登录</a>
-								</div>
-								<a class="basic-btn-blue b-radius newmlog-btn txl-login" style="margin-bottom: 0px;"><i class="weui-loading"></i>登录</a>
-								<div class="newlog-bt-box clearflow" style="padding-top: 8px">
-									<a href="register.html">免费注册</a>
-									<a href="resetpassword.html">忘记密码</a>
-								</div>
 							</div>
 							<div class="code-pass-changes">
-								<form  id="txlform1" onsubmit="return false">
-									<div class="basic-form-group b-radius ">
-										<i class="iconfont log-icon log-tel-icon"></i>
-										<div class="basic-input">
-											<input type="text" class="form-control basic-text-default new-tel-input" id="txtMobile" name="tel">
-											<span class="input-notice">手机号</span>
-											<div class="input-tab">
-												<i class="iconfont  i-error"></i>
-											</div>
+								<form id="txlform1" onsubmit="return false">
+									<div class="basic-form-group b-radius "> <i class="iconfont log-icon log-tel-icon"></i>
+										<div class="basic-input"> <input type="email" class="form-control basic-text-default new-tel-input" id="email"
+											 name="email" required="required"> <span class="input-notice">邮箱</span>
+											<div class="input-tab"> <i class="iconfont  i-error"></i> </div>
 										</div>
 									</div>
 									<div class="errorText"></div>
 									<div class="clearflow">
-										<div class="basic-form-group b-radius newlog-code">
-											<i class="iconfont log-icon log-code-icon"></i>
+										<div class="basic-form-group b-radius newlog-code"> <i class="iconfont log-icon log-code-icon"></i>
 											<div class="basic-input">
-												<input type="text" class="form-control basic-text-default " id="txtCode" name="code">
+												<input type="text" class="form-control basic-text-default " id="txtCode" name="txtCode" required="required">
 												<span class="input-notice">验证码</span>
-												<div class="input-tab">
-													<i class="iconfont  i-error"></i>
-												</div>
+												<div class="input-tab"> <i class="iconfont  i-error"></i> </div>
 											</div>
-										</div>
-										<a class="p3-hqyzm basic-btn-blue b-radius newlog-code-btn">发送验证码</a>
+										</div> <input type="button" class="basic-btn-blue b-radius newlog-code-btn forgetBtn" value="获取验证码"/>
 									</div>
 									<div class="errorText"></div>
+									<div class="clearflow"><a class="newlog-change-a">切换密码登录</a> </div> 
+									<input type="submit" value="登录" class="basic-btn-blue b-radius newmlog-btn txl-login1" onclick="userloginbyemail()"><i class="weui-loading"></i>
 								</form>
-								<div class="clearflow">
-									<a class="newlog-change-a">切换密码登录</a>
-								</div>
-								<a class="basic-btn-blue b-radius newmlog-btn txl-login1"><i class="weui-loading"></i>登录</a>
-								<div class="newlog-bt-box clearflow">
-									<a href="register.html">免费注册</a>
-									<a href="resetpassword.html">忘记密码</a>
+								<div class="newlog-bt-box clearflow"><a href="register.html">免费注册</a><a href="resetpassword.html">忘记密码</a>
 								</div>
 							</div>
-
-
-
 						</div>
 					</div>
 				</div>
@@ -220,267 +179,95 @@
 		</div>
 		<div class="footer">
 			<div class="foot-top pad-lr">
-
 				<div class="flex align-center justify-between">
-
 					<div>
-
 						<div class="foot-top-box">
-
 							<div class="foot-top-tit">关于我们</div>
-
 							<ul class="foot-top-ul">
-
-
 								<li><a href="https://bj.qgbjvip.com/introduction.html">公司介绍</a></li>
-
-
 								<li><a href="https://bj.qgbjvip.com/culture.html">企业文化</a></li>
-
-
 								<li><a href="https://bj.qgbjvip.com/legal.html">法律申明和隐私条款</a></li>
-
-
 								<li><a href="https://bj.qgbjvip.com/agreement.html">用户协议</a></li>
-
-
 								<li><a href="https://bj.qgbjvip.com/joinus.html">招贤纳士</a></li>
-
-
 							</ul>
-
 						</div>
-
 						<div class="foot-top-box foot-top-box2">
-
 							<div class="foot-top-tit">服务分类</div>
-
 							<ul class="foot-top-ul">
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-2-0-0-0-0-1.html" rel="nofollow" }>居民搬家</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-3-0-0-0-0-1.html" rel="nofollow" }>公司搬家</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-4-0-0-0-0-1.html" rel="nofollow" }>小型搬家</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-5-0-0-0-0-1.html" rel="nofollow" }>长途搬家</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-6-0-0-0-0-1.html" rel="nofollow" }>空调移机</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-7-0-0-0-0-1.html" rel="nofollow" }>设备拆迁</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-8-0-0-0-0-1.html" rel="nofollow" }>起重吊装</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-9-0-0-0-0-1.html" rel="nofollow" }>搬家搬场</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-10-0-0-0-0-1.html" rel="nofollow" }>钢琴搬运</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-11-0-0-0-0-1.html" rel="nofollow" }>家具拆装</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-12-0-0-0-0-1.html" rel="nofollow" }>搬运人力</a>
-
-								</li>
-
-
-								<li>
-
-									<a href="https://bj.qgbjvip.com/product-13-0-0-0-0-1.html" rel="nofollow" }>国际搬家</a>
-
-								</li>
-
-
-
-
+								<li><a href="https://bj.qgbjvip.com/product-2-0-0-0-0-1.html" rel="nofollow" }>居民搬家</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-3-0-0-0-0-1.html" rel="nofollow" }>公司搬家</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-4-0-0-0-0-1.html" rel="nofollow" }>小型搬家</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-5-0-0-0-0-1.html" rel="nofollow" }>长途搬家</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-6-0-0-0-0-1.html" rel="nofollow" }>空调移机</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-7-0-0-0-0-1.html" rel="nofollow" }>设备拆迁</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-8-0-0-0-0-1.html" rel="nofollow" }>起重吊装</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-9-0-0-0-0-1.html" rel="nofollow" }>搬家搬场</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-10-0-0-0-0-1.html" rel="nofollow" }>钢琴搬运</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-11-0-0-0-0-1.html" rel="nofollow" }>家具拆装</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-12-0-0-0-0-1.html" rel="nofollow" }>搬运人力</a> </li>
+								<li><a href="https://bj.qgbjvip.com/product-13-0-0-0-0-1.html" rel="nofollow" }>国际搬家</a> </li>
 							</ul>
-
 						</div>
-
 						<div class="foot-top-box">
-
 							<div class="foot-top-tit">商业合作</div>
-
 							<ul class="foot-top-ul">
-
 								<li><a href="addinfo.html">商家入驻</a></li>
-
 								<li><a href="addinfo.html">信息发布</a></li>
-
 							</ul>
-
 						</div>
-
 						<div class="foot-top-box" style="margin-right: 0">
-
 							<div class="foot-top-tit">联系我们</div>
-
 							<ul class="foot-top-ul">
-
 								<li><a href="http://wpa.qq.com/msgrd?v=3&uin=2830801730&site=qq&menu=yes" target="_blank">客服QQ：2830801730</a></li>
-
 								<li><a>邮箱：zsbb168@163.com</a></li>
-
 								<li><a>违法信息举报邮箱：shansheng168@163.com</a></li>
-
 								<li><a>侵权投诉邮箱：H168vip@163.com</a></li>
-
 							</ul>
-
 						</div>
-
 					</div>
-
 					<div class="foot-top-box3 flex align-center">
-
 						<div class="foot-top-box3-div">
-
 							<p>微信扫一扫</p>
-
 							<p>获取更多资讯</p>
-
-						</div>
-
-						<img width="121px" height="121" src="images/f6a557a3b6e536b9c669d0e16594bb75.jpeg" alt="巧瓜搬家网">
-
+						</div> <img width="121px" height="121" src="images/f6a557a3b6e536b9c669d0e16594bb75.jpeg" alt="巧瓜搬家网">
 					</div>
-
 				</div>
-
 			</div>
 			<div class="clear"></div>
-
 			<div class="foot-bottom" style="margin-top: 20px">
-
 				<p class="foot-bottom-p1">贵州达月乐网络科技有限公司版权所有 <a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">黔ICP备18004443号-5
 					</a> 北京巧瓜搬家网 Copyright © 2020, All Rights Reserved </p>
-
-				<p class="foot-bottom-p1">关键词：<a href="/">北京搬家公司</a>
-
-					<span><a href="https://bj.qgbjvip.com/">北京搬家网</a></span>
-
-					<span><a href="https://bj.qgbjvip.com/">北京搬家公司网</a></span>
-
-					<span><a href="https://bj.qgbjvip.com/">北京搬家</a></span>
-
-					<span><a href="https://bj.qgbjvip.com/">北京巧瓜搬家网</a></span>
-
-				</p>
-
+				<p class="foot-bottom-p1">关键词：<a href="/">北京搬家公司</a> <span><a href="https://bj.qgbjvip.com/">北京搬家网</a></span> <span><a
+						 href="https://bj.qgbjvip.com/">北京搬家公司网</a></span> <span><a href="https://bj.qgbjvip.com/">北京搬家</a></span> <span><a
+						 href="https://bj.qgbjvip.com/">北京巧瓜搬家网</a></span> </p>
 			</div>
-
-
 		</div>
-
 		<script src="js/jquery.js"></script>
 		<script src="js/code-v1.js"></script>
 		<script>
 			window.onload = function() {
 				$('.message_code .p4-yzm').attr("src", $('.message_code .p4-yzm').attr("src") + '?' + Math.random());
 			}
-
 			$(".newlog-change-a").click(function() {
 				var $parent = $(this).parents(".code-pass-changes");
 				$parent.hide().siblings(".code-pass-changes").show();
 			});
-
 			$(".message_code .p4-yzm").click(function() {
 				$(this).attr("src", $(this).attr("src") + '?' + Math.random());
-			})
-			$('.p3-hqyzm').click(function() {
-				var tel = $('input[name=tel]').val();
-				$.post("/index/sendcode.html", {
-					tel: tel
-				}, function(d) {
-					alert(d.msg);
-				}, 'json');
 			});
-			$('.txl-login').click(function() {
-				// $('#txlform').submit();
-			})
-			$('.txl-login1').click(function() {
-				// $('#txlform1').submit();
-			})
 		</script>
 		<script src="js/code.js"></script>
 		<script>
 			$(function() {
-				code_draw();
-				// 点击后刷新验证码
+				code_draw(); // 点击后刷新验证码				
 				$("#canvas").on('click', function() {
 					code_draw();
-				})
-
-				$(".btn").on('click', function() {
-					// 将输入的内容转为大写，可通过这步进行大小写验证
-					var val = $(".input-val").val().toLowerCase();
-					// 获取生成验证码值
-					var num = $('#canvas').attr('data-code');
-					if (val == '') {
-						alert('请输入验证码！');
-					} else if (val == num) {
-						alert('提交成功！');
-						$(".input-val").val('');
-						draw(show_num);
-
-					} else {
-						alert('验证码错误！请重新输入！');
-						$(".input-val").val('');
-						draw(show_num);
-					}
-				})
+				});
 			})
 		</script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/data.tools.js"></script>
+		<script src="js/data.dispose.js"></script>
+		<script src="js/countdown.js"></script>
 	</body>
 </html>
