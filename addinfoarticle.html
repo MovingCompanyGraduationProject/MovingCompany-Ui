@@ -14,6 +14,12 @@
         display: none;
     }
 </style>
+<script src="static/bingher/ueditor/lang/zh-cn/zh-cn.js" type="text/javascript" defer="defer"></script>
+		<link href="static/bingher/ueditor/themes/default/css/ueditor.css" type="text/css" rel="stylesheet">
+		<script src="static/bingher/ueditor/third-party/codemirror/codemirror.js" type="text/javascript" defer="defer"></script>
+		<link rel="stylesheet" type="text/css" href="static/bingher/ueditor/third-party/codemirror/codemirror.css">
+		<script src="static/bingher/ueditor/third-party/zeroclipboard/ZeroClipboard.js" type="text/javascript" defer="defer"></script>
+		<link id="layuicss-layer" rel="stylesheet" href="https://sh.qgbjvip.com/static/plugins/layui/css/modules/layer/default/layer.css?v=3.1.1" media="all">
 <body>
 <div class="header">
     <div class="head-top flex align-center justify-between pad-lr">
@@ -62,16 +68,17 @@
                     <p class="p12-li-tit"><span>*</span> 标题</p>
                     <input type="text" class="p11-input" placeholder="请填写搬家行业相关资讯文章标题" name="title">
                 </li>
-                <li class="p16-align-start">
-                    <p class="p12-li-tit"><span>*</span> 内容</p>
-                    <script id="content" name="content" type="text/plain"></script>
-<!-- 引入ueditor的js代码 -->
-<script src="/static/bingher/ueditor/ueditor.config.js"></script>
-<script src="/static/bingher/ueditor/ueditor.all.js"></script>
-<script>
-    //ueditor代码
-    var ue = UE.getEditor("content",{"serverUrl":"\/ueditor\/index","UEDITOR_HOME_URL":"\/static\/bingher\/ueditor\/","initialFrameHeight":600,"autoHeightEnabled":true,"maximumWords":200000,"initialContent":""});
-</script>                </li>
+               <li class="p16-align-start">
+               	<p class="p12-li-tit"><span>*</span> 详细描述</p>
+               	<script id="content" name="content" type="text/plain"  style="width:100%"></script>
+               	<!-- 引入ueditor的js代码 -->
+               	<script src="static/bingher/ueditor/ueditor.config.js"></script>
+               	<script src="static/bingher/ueditor/ueditor.all.js"></script>
+               	<script>
+               		//ueditor代码
+               		var ue = UE.getEditor("content",{"serverUrl":'ueditor\index',"UEDITOR_HOME_URL":'static//bingher//ueditor//',"initialFrameWidth":"90%","initialFrameHeight":400,"autoHeightEnabled":true,"maximumWords":200000,"initialContent":""});
+               	</script>
+               </li>
                 <li>
                     <p class="p12-li-tit"><span>*</span> 详细地址</p>
                     <select class="p11-s-input" id='sheng' name="province" onChange="change(this,1)">
