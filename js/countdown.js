@@ -111,12 +111,12 @@ $(function(){
 	 * 用户注册界面验证邮箱
 	 */
 	$(".registerBtn").html('获取验证码').on("click", function(){
-		if($("#email").val()!=null&&$("#email").val()!=''){
+		if($("#myemail").val()!=null&&$("#myemail").val()!=''){
 			var json = {};
-			json['email'] = $("#email").val();
+			json['email'] = $("#myemail").val();
 			var url="sendVisCode";
 			MySubmitString(JSON.stringify(json), url, function(data) {
-				data['email'] = $("#email").val();
+				data['email'] = $("#myemail").val();
 				window.sessionStorage.setItem("appEmailVerifyCode",JSON.stringify(data));
 				if(data.msg=="ok"){
 					var that = $(".registerBtn");

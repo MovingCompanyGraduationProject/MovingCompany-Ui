@@ -370,16 +370,120 @@ function userloginbyemail(){
 	}
 }
 
+/**
+ * 跳转个人页面
+ */
 $(".mybtn").click(function(){
 	if($("#username").html()!=''){
 		window.location.href="gerenzhongxin.html";
 	}
 })
 
+/**
+ * 关闭指定提示框
+ * @param {Object} str
+ */
 function closebox(str){
 	$("#"+str).css("display","none");
 }
 
+/**
+ * 打开消息提示框
+ * @param {Object} str
+ */
 function showbox(str){
 	$("#"+str).css("display","block");
+}
+
+/**
+ * 忘记密码 校验邮箱是否已注册
+ */
+$("#email").change(function (){
+	if($("#email").val()!=''){
+		var json = {};
+		json['email'] = $("#email").val();
+		url = "checkEmeil";
+		MySubmitString(JSON.stringify(json), url, function(data) {
+			if(data!=null&&data.msg!='ok'){
+				$("#email-tab").css("display","block");
+				$("#email-text").html("该邮箱尚未注册！");
+			}
+			else{
+				$("#email-tab").css("display","none");
+				$("#email-text").html("");
+			}
+		})
+	}
+	else{
+		$("#email-tab").css("display","none");
+		$("#email-text").html("");
+	}
+})
+
+/**
+ * 注册 校验邮箱是否已注册
+ */
+$("#myemail").change(function (){
+	if($("#myemail").val()!=''){
+		var json = {};
+		json['email'] = $("#myemail").val();
+		url = "checkEmeil";
+		MySubmitString(JSON.stringify(json), url, function(data) {
+			if(data!=null&&data.msg=='ok'){
+				$("#email-tab").css("display","block");
+				$("#email-text").html("该邮箱已被注册，请直接登录");
+			}
+			else{
+				$("#email-tab").css("display","none");
+				$("#email-text").html("");
+			}
+		})
+	}
+	else{
+		$("#email-tab").css("display","none");
+		$("#email-text").html("");
+	}
+})
+
+/**
+ * 注册 校验用户名是否已存在
+ */
+$("#txtUserName").change(function (){
+	if($("#txtUserName").val()!=''){
+		var json = {};
+		json['username'] = $("#txtUserName").val();
+		url = "checkUserName";
+		MySubmitString(JSON.stringify(json), url, function(data) {
+			if(data!=null&&data.msg=='ok'){
+				$("#username-tab").css("display","block");
+				$("#username-text").html("该用户名已存在");
+			}
+			else{
+				$("#username-tab").css("display","none");
+				$("#username-text").html("");
+			}
+		})
+	}
+	else{
+		$("#username-tab").css("display","none");
+		$("#username-text").html("");
+	}
+})
+
+/**
+ * 查询渲染搬家类型 appointment.html
+ */
+function getServiceType(){
+	var json = {};
+	var url = "queryAllServiceType";
+	MySubmitString(JSON.stringify(json), url, function(data) {
+		var str = "<select id='yylx' required='required' style='line-height: 26px;border:none;font-size: 22px;outline: none;padding: 20px;background: #fff;margin-left: -5px;width: 68%;'>";
+			str+="<option value=''>请选择</option>";
+		var array = data.serviceTypeList;
+		$.each(array, function(index, element) {
+			str+="<option value='"+element['servicetypeid']+"'>"+element['name']+"</option>";
+		})
+		str+="</select>";
+		$("#serviceType").append(str);
+	})
 }
