@@ -12,7 +12,7 @@
 <body>
 <div class="header">
     <div class="head-top flex align-center justify-between pad-lr">
-        <p><span></span><!-- <img width="11" height="13" src="/template/qgbj/index/images/home_dw.png" alt=""> --> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
+        <p><span></span><img width="11" height="13" src="images/home_dw.png" alt=""> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
         <ul class="head-top-ul p15-head-ul">
             <li><a href="javascript:;" id="username"></a></li>
             <li><a href="logout.html">退出登录</a></li>
@@ -55,19 +55,19 @@
             <ul>
                 <li>
                     <p class="p12-li-tit"><span>*</span> 旧密码</p>
-                    <input type="password" class="p12-input" name="nowpassword">
+                    <input type="password" class="p12-input" name="nowpassword" id="nowpassword">
                 </li>
                 <li>
                     <p class="p12-li-tit"><span>*</span> 新密码</p>
-                    <input type="password" class="p12-input" name="password">
+                    <input type="password" class="p12-input" name="password" id="password">
                 </li>
                 <li>
                     <p class="p12-li-tit"><span>*</span> 确认密码</p>
-                    <input type="password" class="p12-input" name="password2">
+                    <input type="password" class="p12-input" name="password2" id="password2">
                 </li>
             </ul>
             <div class="p12-btn">
-                <a href="javascript:;" onclick="form();">完成修改</a>
+                <a href="javascript:;" onclick="updateUserPassword();">完成修改</a>
             </div>
         </form>
     </div>
@@ -286,6 +286,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/jquery.cookie.js"></script>
 <script src="js/data.tools.js"></script>
+<script src="js/jquery.md5.js"></script>
 <script src="js/data.dispose.js"></script>
 </body>
 </html>

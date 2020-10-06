@@ -19,7 +19,7 @@
 				<p><span></span><img width="11" height="13" src="images/home_dw.png" alt=""> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
 				<ul class="head-top-ul p15-head-ul">
 					<li><a href="javascript:;" id="username">用户名</a></li>
-					<li><a href="logout.html">退出</a></li>
+					<li><a href="logout.html">退出登录</a></li>
 					<li> <a href="gerenzhongxin">个人中心 <img src="images/p15_bot.png" alt=""></a>
 						<ul class="smul" style="margin-left: -32px;">
 							<li><a href="release.html">我的发布</a></li>
@@ -54,20 +54,20 @@
 				<div class="p13-right-cont">
 					<ul>
 						<li>
-							<div class="p13-r-left flex align-center"> <img src="images/p13_pic01_1.png" alt="">
+							<div class="p13-r-left flex align-center"> <img src="images/p13_pic01_1.png" alt="" id="rzidcardimg">
 								<div class="p13-r-div">
 									<p>身份证认证</p>
-									<p>需清晰的手持身份证照片，3-5个工作日完成审核</p>
+									<p><span id="rzidcardspan">需清晰的手持身份证照片，3-5个工作日完成审核</span></p>
 								</div>
-							</div> <a class="p13-no" href="javascript:;" onclick="showbox('idcard')">去认证</a>
+							</div> <a class="p13-no" href="javascript:;" onclick="showbox('idcard')" id="rzidcard">去认证</a>
 						</li>
 						<li>
 							<div class="p13-r-left flex align-center"> <img src="images/p13_pic02.png" alt="">
 								<div class="p13-r-div">
 									<p>营业执照认证</p>
-									<p>请在明亮地方认证，简单便捷、实时通过</p>
+									<p><span id="rzbusinesslicencespan">请在明亮地方认证，简单便捷、实时通过</span></p>
 								</div>
-							</div> <a class="p13-no" href="javascript:;" onclick="showbox('businesslicence')">去认证</a>
+							</div> <a class="p13-no" href="javascript:;" onclick="showbox('businesslicence')" id="rzbusinesslicence">去认证</a>
 						</li>
 					</ul>
 				</div>
@@ -142,11 +142,11 @@
 						<ul class="p13-hb-ul">
 							<li>
 								<span>真实姓名：</span>
-								<input type="text" class="ipt1" name="name">
+								<input type="text" class="ipt1" name="name" id="name">
 							</li>
 							<li>
 								<span>身份证号：</span>
-								<input type="text" class="ipt1" name="number">
+								<input type="text" class="ipt1" name="number" id="number">
 							</li>
 							<li>
 								<span>上传证件信息：</span>照片仅支持jpg，gif，bmp，png格式，大小不超过2MB
@@ -154,7 +154,7 @@
 							<li>
 								<label class="p13-label-1 margin-top" for="z_pic">
 									<input type="hidden" class="ipt1" name="image1" id="z_pic_1">
-									<img class="p13-img1 z_pic" src="images/p13-sfz1.png" alt="">
+									<img class="p13-img1 z_pic" src="images/p13-sfz-z.png" alt="身份证正面" id="idcardz">
 									<button type="button" class="layui-btn" id="z_pic">上传图片</button><input class="layui-upload-file" type="file"
 									 accept="undefined" name="file">
 								</label>
@@ -162,7 +162,7 @@
 							<li>
 								<label class="p13-label-2" for="f_pic">
 									<input type="hidden" class="ipt1" name="image2">
-									<img class="p13-img2 f_pic" src="images/p13-sfz1.png" alt="">
+									<img class="p13-img2 f_pic" src="images/p13-sfz-f.png" alt="身份证反面(有国徽那一面)" id="idcardf">
 									<button type="button" class="layui-btn" id="f_pic">上传图片</button><input class="layui-upload-file" type="file"
 									 accept="undefined" name="file">
 								</label>
@@ -170,7 +170,7 @@
 							<li>
 								<input type="hidden" class="ipt1" name="type" value="0">
 								<div class="p13-btn" onclick="closebox('idcard')">
-									<a href="javascript:;" onclick="form();">确定</a>
+									<a href="javascript:;" onclick="checkIdCard();">确定</a>
 								</div>
 							</li>
 						</ul>
@@ -198,7 +198,7 @@
 							<li>
 								<label class="p13-label-1 margin-top" for="z_pic1">
 									<input type="hidden" class="ipt1" name="image1" id="z_pic1_1">
-									<img class="p13-img1 z_pic1" src="images/p13-zz1.png" alt="">
+									<img class="p13-img1 z_pic1" src="images/p13-zz1.png" alt="" id="userphoto">
 									<button type="button" class="layui-btn" id="z_pic1">上传图片</button><input class="layui-upload-file" type="file"
 									 accept="undefined" name="file">
 								</label>
@@ -206,7 +206,7 @@
 							<li>
 								<input type="hidden" class="ipt1" name="type" value="1">
 								<div class="p13-btn" onclick="closebox('businesslicence')">
-									<a href="javascript:;" onclick="form1();">确定</a>
+									<a href="javascript:;" onclick="CheckBusinessLicense();">确定</a>
 								</div>
 							</li>
 						</ul>
@@ -218,39 +218,74 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/swiper.min.js"></script>
 		<script>
-			function form() {
-				$('form').submit();
-			}
-			layui.use('form', function() {
+			layui.use('form', function(){
 				var form = layui.form;
 				form.render();
 			});
-			$('body').on('click', '.p11-pic-03', function() {
-				$(this).parent('.p11-pos').remove()
-			})
-			function change(obj, type) {
-				$.post("/changeCity.html", {
-					"id": obj.value,
-					"type": type,
-					act: 'area'
-				}, function(res) {
-					if (type == 1) {
-						if (obj.value > 0) {
-							$("#shi").html(res);
-							$("#qu").html("<option value=''>选择区</option>");
-						} else {
-							$("#shi").html("<option value=''>选择市</option>");
-							$("#qu").html("<option value=0>选择区</option>");
-						}
-					} else if (type == 2) {
-						if (obj.value > 0) {
-							$("#qu").html(res);
-						} else {
-							$("#qu").html("<option value=0>选择区</option>");
+		
+			layui.use('upload', function(){
+				var $ = layui.jquery
+					,upload = layui.upload;
+				var uploadInst = upload.render({
+					elem: '#z_pic',
+					accept: 'file',
+					data: {
+						myfilename:'idcard'
+					},
+					exts: 'jpg|png|gif|bmp',
+					url: "http://localhost:9090/uploadUserPhoto.do",
+					done: function(res){
+						if(res.error > 0){
+							return layer.msg(res.message);
+						}else{
+							$('.z_pic').attr('src',res.data.src);
+							$('#z_pic_1').val(res.data.src);
 						}
 					}
-				})
-			}
+				});
+			});
+			layui.use('upload', function(){
+				var $ = layui.jquery
+					,upload = layui.upload;
+				var uploadInst = upload.render({
+					elem: '#f_pic',
+					accept: 'file',
+					data: {
+						myfilename:'idcard'
+					},
+					exts: 'jpg|png|gif|bmp',
+					url: "http://localhost:9090/uploadUserPhoto.do",
+					done: function(res){
+						if(res.error > 0){
+							return layer.msg(res.message);
+						}else{
+							$('.f_pic').attr('src',res.data.src);
+							$('input[name=f_pic]').val(res.data.src);
+						}
+					}
+				});
+			});
+			layui.use('upload', function(){
+				var $ = layui.jquery
+					,upload = layui.upload;
+				var uploadInst = upload.render({
+					elem: '#z_pic1',
+					accept: 'file',
+					data: {
+						myfilename:'businesslicense'
+					},
+					exts: 'jpg|png|gif|bmp',
+					url: "http://localhost:9090/uploadUserPhoto.do",
+					done: function(res){
+						if(res.error > 0){
+							return layer.msg(res.message);
+						}else{
+							$('.z_pic1').attr('src',res.data.src);
+							$('#z_pic1_1').val(res.data.src);
+						}
+					}
+				});
+			});
 		</script>
 		<script src="js/jquery.cookie.js"></script>
 		<script src="js/data.tools.js"></script>

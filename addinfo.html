@@ -29,8 +29,8 @@
 			<div class="head-top flex align-center justify-between pad-lr">
 				<p><span></span><img width="11" height="13" src="images/home_dw.png" alt=""> 北京</span> <a class="margin-left" href="index.html">返回首页</a></p>
 				<ul class="head-top-ul p15-head-ul">
-					<li><a href="javascript:;">用户名</a></li>
-					<li><a href="logout.html">退出</a></li>
+					<li><a href="javascript:;" id="username">用户名</a></li>
+					<li><a href="logout.html">退出登录</a></li>
 					<li>
 						<a href="gerenzhongxin.html">个人中心 <img src="images/p15_bot.png" alt=""></a>
 						<ul class="smul" style="margin-left: -32px;">
@@ -66,11 +66,11 @@
 			<div class="p12-right shadow">
 				<div class="p12-right-tit"><span>发布搬家公司</span> <a href="addinfoarticle.html">发布行业资讯</a></div>
 				<div class="p12-right-cont p15-right-cont">
-					<form action="" method="post" id="form">
+					<form onsubmit="return false" id="form">
 						<ul>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 标题</p>
-								<input type="text" class="p11-input" placeholder="请填写标题，例如北京***搬家公司" name="title">
+								<input type="text" class="p11-input" placeholder="请填写标题，例如北京***搬家公司" name="title" id="title" required="required">
 							</li>
 							<div class="tsks" style="left: 107px;top: 20px;width: 60%">
 								<span class="bot"></span>
@@ -91,7 +91,7 @@
 										<div class="clear"></div>
 									</div>
 									<p class="p11-file-des">上传的图片不能包含有文字、数字、网址、名片等，最多上传<span>8</span>张，每张最大<span>5M</span></p>
-									<!--                        <div class="p11-file-imgdes">-->
+								<!-- 	                       <div class="p11-file-imgdes">
 									<!--                            <img src="images/p11_pic_02.png" alt="">-->
 									<!--                        </div>-->
 								</div>
@@ -118,48 +118,24 @@
 							</div>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 服务基价</p>
-								<input type="number" class="p11-input" placeholder="请填写服务基价" name="price">
+								<input type="number" class="p11-input" placeholder="请填写服务基价" name="price" id="price" required="required">
 							</li>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 服务内容</p>
-								<ul class="p16-ul p11-ul tags">
-									<li num="1" data-id='2'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 居民搬家 </li>
-									<li num="1" data-id='3'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 公司搬家 </li>
-									<li num="1" data-id='4'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 小型搬家 </li>
-									<li num="1" data-id='5'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 长途搬家 </li>
-									<li num="1" data-id='6'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 空调移机 </li>
-									<li num="1" data-id='7'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 设备拆迁 </li>
-									<li num="1" data-id='8'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 起重吊装 </li>
-									<li num="1" data-id='9'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 搬家搬场 </li>
-									<li num="1" data-id='10'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 钢琴搬运 </li>
-									<li num="1" data-id='11'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 家具拆装 </li>
-									<li num="1" data-id='12'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 搬运人力 </li>
-									<li num="1" data-id='13'>
-										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 国际搬家 </li>
+								<ul class="p16-ul p11-ul tags" id="serviceTypeUl" required="required">
 								</ul>
 							</li>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 服务特色</p>
-								<input type="text" class="p11-input" placeholder="一句话卖点" name="tese">
+								<input type="text" class="p11-input" placeholder="一句话卖点" name="tese" id="tese" required="required">
 							</li>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 服务区域</p>
-								<input type="text" class="p11-input" placeholder="请填写服务区域" name="quyu">
+								<input type="text" class="p11-input" placeholder="请填写服务区域" name="quyu" id="quyu" required="required">
 							</li>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 服务承诺</p>
-								<ul class="p16-ul p11-ul chengnuo">
+								<ul class="p16-ul p11-ul chengnuo" required="required">
 									<li num="1" data-name="支持发票">
 										<img class="margin-right-xs" width="16" height="16" src="images/p3_select2.png" alt=""> 支持发票
 									</li>
@@ -176,60 +152,22 @@
 							</li>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 联系人</p>
-								<input type="text" class="p11-input" placeholder="请填写联系人" name="contacts">
+								<input type="text" class="p11-input" placeholder="请填写联系人" name="contacts" id="contacts" required="required">
 							</li>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 联系电话</p>
-								<input type="text" class="p11-input" placeholder="请填写联系电话" name="phone">
+								<input type="text" class="p11-input" placeholder="请填写联系电话" name="phone" id="phone" required="required">
 							</li>
 							<li>
 								<p class="p12-li-tit"><span>*</span> 详细地址</p>
-								<select class="p11-s-input" id='sheng' name="province" onChange="change(this,1)">
-									<option value="">选择省 </option>
-									<option value="1">北京 </option>
-									<option value="2">上海 </option>
-									<option value="3">重庆 </option>
-									<option value="4">天津 </option>
-									<option value="15">广东 </option>
-									<option value="25">广西 </option>
-									<option value="28">安徽 </option>
-									<option value="40">四川 </option>
-									<option value="42">浙江 </option>
-									<option value="45">江苏 </option>
-									<option value="48">湖北 </option>
-									<option value="50">山东 </option>
-									<option value="52">河南 </option>
-									<option value="55">福建 </option>
-									<option value="58">云南 </option>
-									<option value="60">贵州 </option>
-									<option value="697">甘肃 </option>
-									<option value="713">海南 </option>
-									<option value="1463">黑龙江 </option>
-									<option value="1518">湖南 </option>
-									<option value="1553">河北 </option>
-									<option value="1635">江西 </option>
-									<option value="1657">吉林 </option>
-									<option value="1674">辽宁 </option>
-									<option value="1695">宁夏 </option>
-									<option value="1701">内蒙古 </option>
-									<option value="1715">青海 </option>
-									<option value="1796">山西 </option>
-									<option value="1815">陕西 </option>
-									<option value="1860">新疆 </option>
-									<option value="1880">西藏 </option>
-								</select>
-								<select class="p11-s-input" id='shi' name="city" onChange="change(this,2)">
-									<option value="">选择市 </option>
-								</select>
-								<select class="p11-s-input" id='qu' name="area">
-									<option value="0">选择区 </option>
-								</select>
-								<input type="text" class="p11-input p11-input-2" name="address" placeholder="请输入具体的地址">
+								<div id="myaddress"></div>
+								<input type="text" class="p11-input p11-input-2" name="address" id="useraddress" placeholder="请输入具体的地址">
 							</li>
 						</ul>
-						<p style="font-size: 20px;margin:15px 10px;font-weight: bold">注意：发布搬家公司需支付<span style="color:red;">18</span>元,支付后不需要审核将会直接发布</p>
+						<!-- <p style="font-size: 20px;margin:15px 10px;font-weight: bold">注意：发布搬家公司需支付<span style="color:red;">18</span>元,支付后不需要审核将会直接发布</p> -->
 						<div class="p12-btn p11-btn">
-							<a href="javascript:;" onclick="form();">发布</a>
+							<a href="javascript:;" onclick="releaseCompanyMessage();">发布</a>
+							<input type="submit" id="sub" style="display: none;"/>
 						</div>
 					</form>
 				</div>
@@ -413,9 +351,6 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/swiper.min.js"></script>
 		<script>
-			function form() {
-				$('form').submit();
-			}
 			layui.use('form', function() {
 				var form = layui.form;
 				form.render();
@@ -426,8 +361,11 @@
 				var uploadInst = upload.render({
 					elem: '#uploadfile',
 					accept: 'file',
+					data: {
+						myfilename:'companyphoto'
+					},
 					exts: 'jpg|png|gif|bmp',
-					url: "/upload/index_sy.html",
+					url: "http://localhost:9090/uploadUserPhoto.do",
 					done: function(res) {
 						if (res.error > 0) {
 							return layer.msg(res.message);
@@ -435,9 +373,9 @@
 							var str = '';
 							str += '<div class="p11-pos">'
 							str += '<img class="p11-fm" src="images/p11_fm.png" alt="">'
-							str += '<img src="' + res.url + '" alt="">'
+							str += '<img src="' + res.data.src + '" alt="">'
 							str += '<img class="p11-pic-03" src="images/p11_pic_03.png" alt="">'
-							str += '<input type="hidden" name="images[]" value="' + res.url + '">'
+							str += '<input type="hidden" name="images[]" value="' + res.data.src + '">'
 							str += '</div>'
 							$('.p11-label-sctp').append(str)
 						}
@@ -447,7 +385,7 @@
 			$('body').on('click', '.p11-pic-03', function() {
 				$(this).parent('.p11-pos').remove()
 			})
-			$('.tags li').click(function(e) {
+			$('body').on('click', '.tags li', function() {
 				var num = $(this).attr('num')
 				var _parents = $(this).parent().find('li');
 				var jishu = 0;
@@ -492,34 +430,13 @@
 					$(this).attr('num', 1)
 				}
 			})
-
-			function change(obj, type) {
-
-				$.post("/changeCity.html", {
-					"id": obj.value,
-					"type": type,
-					act: 'area'
-				}, function(res) {
-					if (type == 1) {
-						if (obj.value > 0) {
-							$("#shi").html(res);
-							$("#qu").html("<option value=''>选择区</option>");
-						} else {
-							$("#shi").html("<option value=''>选择市</option>");
-							$("#qu").html("<option value=0>选择区</option>");
-						}
-					} else if (type == 2) {
-						if (obj.value > 0) {
-							$("#qu").html(res);
-						} else {
-							$("#qu").html("<option value=0>选择区</option>");
-						}
-					}
-				})
-			}
 		</script>
 		<script src="js/jquery.cookie.js"></script>
 		<script src="js/data.tools.js"></script>
 		<script src="js/data.dispose.js"></script>
+		<script>
+			initializeAddress();//初始化省市区
+			getServiceTypeAddInfo();
+		</script>
 	</body>
 </html>

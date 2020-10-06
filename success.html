@@ -34,7 +34,7 @@
         </p>
         <p class="clearfix">
             <a href="#" onclick="javascript :history.back(-1);" class="btn btn-grey">返回上一页</a>
-            <a id="href" href="" class="btn btn-primary">立即跳转</a>
+            <a id="href" href="" class="btn btn-primary" >立即跳转</a>
         </p>
     </div>
 	<script src="js/jquery.js"></script>
@@ -44,6 +44,7 @@
 			if(myly!=null&&myly!=''){
 				$("#myly").html(myly);
 			}
+			$("#href").attr("href",window.sessionStorage.getItem("href"));
             var wait = document.getElementById('wait'),
                 href = window.sessionStorage.getItem("href");
             var interval = setInterval(function(){
