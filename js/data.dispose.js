@@ -38,7 +38,7 @@ if (cookie != null && cookie != '') {
 			$("#rzbusinesslicence").removeAttr("class");
 			$("#rzbusinesslicence").html("审核中");
 		} else if (mydata.user.companyMessage.approvestate == "AUTHENTICATED") {
-			$("#rzbusinesslicenceimg").attr("src", "p13_pic02_1.png")
+			$("#rzbusinesslicenceimg").attr("src", "images/p13_pic02_1.png")
 			$("#rzbusinesslicence").removeAttr("onclick");
 			$("#rzbusinesslicence").removeAttr("class");
 			$("#rzbusinesslicence").html("已认证");
