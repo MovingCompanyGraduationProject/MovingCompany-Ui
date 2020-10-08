@@ -32,7 +32,7 @@
 			</div>
 			<div class="p12-head flex justify-between align-center pad-lr"> <img src="images/s_logo1.png" width="169" height="40"
 				 alt="">
-				<div class="p12-head-right flex"> <a href="addinfo.html" class="p12-fbxx">发布信息</a> </div>
+				<div class="p12-head-right flex"> <a href="addinfoarticle.html" class="p12-fbxx">发布信息</a> </div>
 			</div>
 		</div>
 		<div class="content pad-lr p12-cont" style="padding-bottom: 0px;">
@@ -41,7 +41,7 @@
 				<ul class="p12-left-ul">
 					<li><a href="release.html">我的发布</a></li>
 					<li><a href="info.html">个人资料</a></li>
-					<li><a href="auth.html">认证管理</a></li>
+					<li class="active"><a href="auth.html">认证管理</a></li>
 					<li><a href="javascript:alert('客服电话:'+'0857-6337257')">联系客服</a></li>
 					<li><a href="liuyankehu.html">留言客户</a></li>
 					<li><a href="setting.html">密码设置</a></li>
@@ -62,7 +62,7 @@
 							</div> <a class="p13-no" href="javascript:;" onclick="showbox('idcard')" id="rzidcard">去认证</a>
 						</li>
 						<li>
-							<div class="p13-r-left flex align-center"> <img src="images/p13_pic02.png" alt="">
+							<div class="p13-r-left flex align-center"> <img src="images/p13_pic02.png" alt="" id="rzbusinesslicenceimg">
 								<div class="p13-r-div">
 									<p>营业执照认证</p>
 									<p><span id="rzbusinesslicencespan">请在明亮地方认证，简单便捷、实时通过</span></p>
@@ -186,11 +186,11 @@
 						<ul class="p13-hb-ul">
 							<li>
 								<span>公司名称：</span>
-								<input type="text" class="ipt1" name="name">
+								<input type="text" class="ipt1" name="name" id="yyname">
 							</li>
 							<li>
 								<span>信用代码：</span>
-								<input type="text" class="ipt1" name="number">
+								<input type="text" class="ipt1" name="number" id="yynumber">
 							</li>
 							<li>
 								<span>上传证件信息：</span>照片仅支持jpg，gif，bmp，png格式，大小不超过2MB
@@ -198,7 +198,7 @@
 							<li>
 								<label class="p13-label-1 margin-top" for="z_pic1">
 									<input type="hidden" class="ipt1" name="image1" id="z_pic1_1">
-									<img class="p13-img1 z_pic1" src="images/p13-zz1.png" alt="" id="userphoto">
+									<img class="p13-img1 z_pic1" src="images/p13-zz1.png" alt="" id="businessLicense">
 									<button type="button" class="layui-btn" id="z_pic1">上传图片</button><input class="layui-upload-file" type="file"
 									 accept="undefined" name="file">
 								</label>

@@ -90,7 +90,7 @@
 
     .quick-msg-wrap{background:#fffbea;border:1px solid #ff6600;border-radius:2px;width:243px;padding:10px;position:absolute;top:6px;left:430px}
 
-    .quick-msg-wrap:before{content:" ";background:url("/image/2012/zsjm-ti.png") no-repeat;width:7px;height:12px;position:absolute;top:15px;left:-7px}
+    /* .quick-msg-wrap:before{content:" ";background:url("/image/2012/zsjm-ti.png") no-repeat;width:7px;height:12px;position:absolute;top:15px;left:-7px} */
 
     .quick-title{border-bottom:1px solid #ff6600;font-size:14px;margin-bottom:5px;padding-bottom:5px}
 
@@ -152,7 +152,7 @@
 
                 <input type="text" placeholder="请输入关键词进行搜索" name="search">
 
-                <a class="head-search-a" href="javascript:;" style="float: right;" onClick="$('#searchForm').submit()"><img src="images/home_search.png" width="17" height="17" alt></a>
+                <a class="head-search-a" href="javascript:;" style="float: right;"><img src="images/home_search.png" width="17" height="17" alt></a>
 
             </form>
 
@@ -311,7 +311,7 @@
 
             <div class="error-msg"></div>
 
-            <form class="msg-form" action method="post" id="form">
+            <form class="msg-form" onsubmit="return false" id="form">
 
                 <ul>
 
@@ -323,7 +323,7 @@
 
                         <span class="form-item">
 
-                        <input type="text" class="item-input" value="北京计时配搬家公司" readonly>
+                        <input type="text" class="item-input" value="" id="shangjia" readonly>
 
                     </span>
 
@@ -331,11 +331,12 @@
 
                     <li class="msg-form-part">
 
-                        <span class="form-title--optional">称呼：</span>
+                       <span class="form-title"><span class="form-title-part">称呼：</span></span>
+                       
 
                         <span class="form-item">
 
-                        <input type="text" class="item-input" maxlength="10" placeholder="请输入您的姓名" name="name">
+                        <input type="text" class="item-input" maxlength="10" placeholder="请输入您的姓名" name="name" required="required">
 
                     </span>
 
@@ -347,7 +348,7 @@
 
                         <span class="form-item">
 
-                        <textarea maxlength="100" name="content" class="item-textarea" id="message"></textarea>
+                        <textarea maxlength="100" name="content" class="item-textarea" id="message" required="required"></textarea>
 
                     </span>
 
@@ -369,7 +370,7 @@
 
                         <span class="form-item">
 
-                        <input name="tel" type="text" maxlength="11" class="item-input" value placeholder="请输入11位数手机号码" data-src="0">
+                        <input name="tel" type="text" maxlength="11" class="item-input" value placeholder="请输入11位数手机号码" data-src="0" required="required">
 
                     </span>
 
@@ -377,7 +378,7 @@
 
                     <li class="msg-form-part">
 
-                       <a href="javascript:alert('留言提交成功。')"><button type="submit" id="submit" class="submit-msg">提交留言</button></a> 
+                       <a href="javascript:;"><button type="submit" id="submit" class="submit-msg" onclick="insertLiuYan()">提交留言</button></a> 
 
                     </li>
 
@@ -603,8 +604,11 @@
 </div>
 
 <script src="js/jquery.js"></script>
-
+<script src="js/jquery.cookie.js"></script>
+<script src="js/data.tools.js"></script>
+<script src="js/data.dispose.js"></script>
 <script>
+	getOneLiuYan();
     $('.fl-hidebox li a').hover(function(){
         $(this).css('color','#e60012');
         var id = $(this).data('id');
@@ -615,23 +619,7 @@
         $(this).children().children('img').attr('src','/template/qgbj/index/images/home_fl_'+id+'.png')
 
     })
-    $('body').append(`
-    <div class="right-bar">
-        <div class="r-box r-icon-01">
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=2830801730&site=qq&menu=yes"><img url="/template/qgbj/index/images/home_pic_24.png" src="/template/qgbj/index/images/home_pic_24.png" alt=""></a>
-        </div>
-        <div class="r-box r-icon-02">
-            <img src="/template/qgbj/index/images/home_ewm.png">
-            <div class="hide-right"><img url="/uploads/20200530/f6a557a3b6e536b9c669d0e16594bb75.jpg" src="/uploads/20200530/f6a557a3b6e536b9c669d0e16594bb75.jpg" alt="巧瓜搬家网"><span></span></div>
-        </div>
-        <div class="r-box r-icon-03">
-            <a href="/user/feedback.html"><img url="/template/qgbj/index/images/home_fk.png" src="/template/qgbj/index/images/home_fk.png" alt="巧瓜搬家网"></a>
-        </div>
-        <div class="r-box r-icon-04">
-            <img url="/template/qgbj/index/images/home_top.png" src="/template/qgbj/index/images/home_top.png" alt="巧瓜搬家网">
-        </div>
-    </div>
-`)
+    
     $('.r-box').hover(function(){
         $(this).css('background','#e60012')
         var src = $(this).children('img').attr('url');

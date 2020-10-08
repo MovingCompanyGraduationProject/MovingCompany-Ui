@@ -1,437 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link type="text/css" rel="stylesheet" href="css/style_order.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/txl-style.css">
-    <title>订单详情-【北京巧瓜搬家信息网】</title>
-    <meta name="keywords" content="北京巧瓜搬家网,搬家,搬家公司,搬家网">
-    <meta name="description" content="北京【巧瓜搬家信息网】是一个网上搬家信息服务平台。主要提供：搬家服务公司的基础搬家信息、搬家电话、搬家价格。巧瓜搬家信息网，用心服务每一位客户。">
-</head>
-<body>
-<div class="header">
-    <div class="header-top">
-        <div class="container d-flex align-items-center justify-content-between">
-            <p class="mb-0 p-2">
-                <b>欢迎进入北京巧瓜搬家网</b>　
-                <span class="text-danger">北京</span>
-                
-            </p>
-            <ul class="head-top-ul mb-0">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link type="text/css" rel="stylesheet" href="css/style_order.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/txl-style.css">
+		<title>订单详情-【北京巧瓜搬家信息网】</title>
+		<meta name="keywords" content="北京巧瓜搬家网,搬家,搬家公司,搬家网">
+		<meta name="description" content="北京【巧瓜搬家信息网】是一个网上搬家信息服务平台。主要提供：搬家服务公司的基础搬家信息、搬家电话、搬家价格。巧瓜搬家信息网，用心服务每一位客户。">
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-top">
+				<div class="container d-flex align-items-center justify-content-between">
+					<p class="mb-0 p-2">
+						<b>欢迎进入北京巧瓜搬家网</b>　
+						<span class="text-danger">北京</span>
 
-                <li><p class="mb-0 p-2 text-danger">今天是 2020年08月31日 星期一</p></li>
+					</p>
+					<ul class="head-top-ul mb-0">
 
-                
-                <li class="loginregsiter"><a href="login.html">登录</a>|</li>
-                <li class="loginregsiter"><a href="register.html">注册</a>|</li>
-                <li class="loginregsiter1"><a href="gerenzhongxin.html">个人中心</a>|</li>
-                <li class="loginregsiter1"><a href="logout.html">退出登录</a>|</li>
+						<li>
+							<p class="mb-0 p-2 text-danger">今天是 <span id="mytime"></span></p>
+						</li>
 
-                
-                <li class="index-tel">
 
-                    <div class="index-ewm"><img src="images/af75df6a293181ef8c533718d934de4e.png" alt="巧瓜搬家网"><span></span></div>
+						<li class="loginregsiter"><a href="login.html">登录</a>|</li>
+						<li class="loginregsiter"><a href="register.html">注册</a>|</li>
+						<li class="loginregsiter1"><a href="gerenzhongxin.html">个人中心</a>|</li>
+						<li class="loginregsiter1"><a href="logout.html">退出登录</a>|</li>
 
-                   
-                <li><a title="24小时客服电话">24小时客服电话：0857-6337257</a></li>
 
-            </ul>
+						<li class="index-tel">
 
-        </div>
+							<div class="index-ewm"><img src="images/af75df6a293181ef8c533718d934de4e.png" alt="巧瓜搬家网"><span></span></div>
 
-    </div>
 
-    <div class="head-center container d-flex justify-content-between">
+						<li><a title="24小时客服电话">24小时客服电话：0857-6337257</a></li>
 
-        <div class="logo"><a href="#"><img src="images/eb398ea0f162ef72eedad803699a0db1.png" width="221" height="52" alt="北京巧瓜搬家信息网"></a></div>
+					</ul>
 
-        <div class="head-search">
+				</div>
 
-            <form action="search.html" id="searchForm">
+			</div>
 
-                <input type="text" placeholder="请输入关键词进行搜索" name="search">
+			<div class="head-center container d-flex justify-content-between">
 
-                <a class="head-search-a" href="javascript:;" style="float: right;" onClick="$('#searchForm').submit()"><img src="images/home_search.png" width="17" height="17" alt></a>
+				<div class="logo"><a href="#"><img src="images/eb398ea0f162ef72eedad803699a0db1.png" width="221" height="52" alt="北京巧瓜搬家信息网"></a></div>
 
-            </form>
+				<div class="head-search">
 
-            <div class="head-search-ul">
+					<form action="search.html" id="searchForm">
 
-                <ul>
+						<input type="text" placeholder="请输入关键词进行搜索" name="search">
 
-                   <li><a href="product.html" class="text-danger">居民搬家</a><span>|</span></li>
+						<a class="head-search-a" href="javascript:;" style="float: right;" onClick="$('#searchForm').submit()"><img src="images/home_search.png"
+							 width="17" height="17" alt></a>
 
-                    <li><a href="product.html">公司搬家</a><span>|</span></li>
+					</form>
 
-                    <li><a href="product.html" class="text-primary">小型搬家</a><span>|</span></li>
+					<div class="head-search-ul">
 
-                    <li><a href="product.html">长途搬家</a><span>|</span></li>
+						<ul>
 
-                    <li><a href="product.html">空调移机</a><span>|</span></li>
+							<li><a href="product.html" class="text-danger">居民搬家</a><span>|</span></li>
 
-                    <li><a href="product.html" class="text-danger">设备搬迁</a><span>|</span></li>
+							<li><a href="product.html">公司搬家</a><span>|</span></li>
 
-                    <li><a href="product.html">搬运人力</a></li>
+							<li><a href="product.html" class="text-primary">小型搬家</a><span>|</span></li>
 
-                </ul>
+							<li><a href="product.html">长途搬家</a><span>|</span></li>
 
-            </div>
+							<li><a href="product.html">空调移机</a><span>|</span></li>
 
-        </div>
+							<li><a href="product.html" class="text-danger">设备搬迁</a><span>|</span></li>
 
-        <a href="#"><img src="images/home_pic_05.png" width="164" height="39" alt></a>
+							<li><a href="product.html">搬运人力</a></li>
 
-    </div>
+						</ul>
 
-    <div id="txlposition">
-        <div class="head-bottom container d-flex">
+					</div>
 
-        <div class="position-relative">
+				</div>
 
-            <div class="d-flex align-items-center head-bot-left">
+				<a href="#"><img src="images/home_pic_05.png" width="164" height="39" alt></a>
 
-                <img class="margin-right-sm" src="images/home_allfl.png" width="13" height="12" alt> 全部服务分类
+			</div>
 
-            </div>
-            <div class="d-none" id="indexServiceType"></div>
+			<div id="txlposition">
+				<div class="head-bottom container d-flex">
 
-        </div>
+					<div class="position-relative">
 
-        <ul class="head-bot-ul pl-0 mb-0 ">
+						<div class="d-flex align-items-center head-bot-left">
 
-            <li ><a href="index.html">首页</a></li>
+							<img class="margin-right-sm" src="images/home_allfl.png" width="13" height="12" alt> 全部服务分类
 
-            <li><a href="product.html ">搬家商家</a></li>
+						</div>
+						<div class="d-none" id="indexServiceType"></div>
 
-            <li><a href="zixun.html">搬家资讯</a></li>
+					</div>
 
-            <li ><a href="changshi.html">搬家常识</a></li>
+					<ul class="head-bot-ul pl-0 mb-0 ">
 
-            <li><a href="jiri.html">搬家吉日</a></li>
+						<li><a href="index.html">首页</a></li>
 
-            <li><a href="wenda.html">搬家问答</a></li>
-			
+						<li><a href="product.html ">搬家商家</a></li>
 
-        </ul>
-        <div class="position-relative">
+						<li><a href="zixun.html">搬家资讯</a></li>
 
-            <a href="addinfo.html" class="rzbutton">商家入驻</a>
+						<li><a href="changshi.html">搬家常识</a></li>
 
-            <div class="rightinfo position-absolute d-none">
-                                <div class="d-flex py-4 align-items-center justify-content-center">
+						<li><a href="jiri.html">搬家吉日</a></li>
 
-                    <img src="images/home_pic_11.png" alt class="mr-avatar">
+						<li><a href="wenda.html">搬家问答</a></li>
 
-                    <div class="p1-ban-right">
 
-                        <p>Hi,！</p>
+					</ul>
+					<div class="position-relative">
 
-                        <p>欢迎来到北京巧瓜搬家网</p><p>
+						<a href="addinfo.html" class="rzbutton">商家入驻</a>
 
-                    </p></div>
+						<div class="rightinfo position-absolute d-none">
+							<div class="d-flex py-4 align-items-center justify-content-center">
 
-                </div>
+								<img src="images/home_pic_11.png" alt class="mr-avatar">
 
-                <div class="p1-ban-btn text-center mb-3 loginregsiter">
+								<div class="p1-ban-right">
 
-                    <a href="login.html">登录</a>
+									<p>Hi,！</p>
 
-                    <a href="register.html">注册</a>
+									<p>欢迎来到北京巧瓜搬家网</p>
+									<p>
 
-                </div>
-                
-                <div class="p1-gg">
+									</p>
+								</div>
 
-                    <ul class="p1-gg-nav">
+							</div>
 
-                        <li class="p1-gg-active">公告</li>
+							<div class="p1-ban-btn text-center mb-3 loginregsiter">
 
-                    </ul>
+								<a href="login.html">登录</a>
 
-                    <ul class="p1-gg-cont">
+								<a href="register.html">注册</a>
 
-                        
-                        <li><a href="#">欢迎入驻</a></li>
+							</div>
 
-                        
-                        <li><a href="#">搬家注意事项</a></li>
+							<div class="p1-gg">
 
-                        
-                        <li><a href="#">搬家方式</a></li>
+								<ul class="p1-gg-nav">
 
-                        
-                        <li><a href="#">搬家公司收费标准</a></li>
+									<li class="p1-gg-active">公告</li>
 
-                        
-                    </ul>
+								</ul>
 
-                </div>
+								<ul class="p1-gg-cont">
 
-                <div class="p1-gg">
 
-                    <ul class="p1-gg-nav">
+									<li><a href="#">欢迎入驻</a></li>
 
-                        <li class="p1-gg-active">北京最新入驻</li>
 
-                    </ul>
+									<li><a href="#">搬家注意事项</a></li>
 
-                    <div class="p1-zxrz-box">
 
-                        <ul>
-                            
-                        </ul>
+									<li><a href="#">搬家方式</a></li>
 
-                    </div>
 
-                </div>
+									<li><a href="#">搬家公司收费标准</a></li>
 
-            </div>
-        </div>
 
+								</ul>
 
-    </div>
-    </div>
+							</div>
 
-</div>
-<nav class="breadbg">
-    <div class="container py-2">
-        当前所在页面：
-        <a href="index.html">首页</a>
-                 ><a href="xiadan.html">在线预约/在线下单</a>            </div>
-</nav>
+							<div class="p1-gg">
 
-<div id="formbox" >
-  	<div class="container">
-  		<div class="orderForm wp9 animated bounceIn">
-  		<div calss="logo textCenter">
-  			
-  		</div>
-  		<div class="inputBox">
-  		<lable>
-  		<span class="hidden-sm hidden-xs">服务类型：</span>
-  		
-  		</lable>
-  		</div>
-  		<div class="inputBox">
-  		<lable>
-  		<span class="hidden-sm hidden-xs">所在城市：</span>
-  		
-  		</lable>
-  		</div>
-  		<div class="inputBox">
-  			<lable>
-  				<span class="hidden-sm hidden-xs">起始地址：</span>
-  				
-  			</lable>
-  		</div>
-  		<div class="inputBox">
-  		<lable>
-  				<span class="hidden-sm hidden-xs">结束地址：</span>
-  				
-  			</lable>
-  		</div>
-  		<div class="inputBox">
-  		<lable>
-  				<span class="hidden-sm hidden-xs">服务时间：</span>
-  				
-  			</lable>
-  		</div>
-  		<div class="inputBox">
-  		<lable>
-  				<span class="hidden-sm hidden-xs">物品类型：</span>
-  				
-  			</lable>
-  		</div>
-  		<div class="inputBox">
-  		<lable>
-  				<span class="hidden-sm hidden-xs">联系人名：</span>
-  				
-  			</lable>
-  		</div>
-  		<div class="inputBox">
-  		<lable>
-  				<span class="hidden-sm hidden-xs">联系电话：</span>
-  				
-  			</lable>
-  		</div>
-  		<div class="submitBox text-center">
-  		<a href="yuyue.html"><input id="orders" type="button" value="在线预约"></a>
-  		<a href="ok_order.html"><input id="orders" type="button" value="在线下单"></a>
-  		</div>
-  		
-  	</div>
-  </div>
-  
-  
-  </div>
-  <div class="footer">
+								<ul class="p1-gg-nav">
 
-    <div class="d-flex container justify-content-between align-items-center my-2">
+									<li class="p1-gg-active">北京最新入驻</li>
 
-    <div class="d-flex justify-content-start">
+								</ul>
 
-        <div class="mr-4">
+								<div class="p1-zxrz-box">
 
-            <div class="font-weight-bold py-2">关于我们</div>
+									<ul>
 
-            <ul class="pl-0 mb-0">
+									</ul>
 
-                
-                <li class="py-1"><a href="#">公司介绍</a></li>
+								</div>
 
-                
-                <li class="py-1"><a href="#">企业文化</a></li>
+							</div>
 
-                
-                <li class="py-1"><a href="#">法律申明和隐私条款</a></li>
+						</div>
+					</div>
 
-                
-                <li class="py-1"><a href="#">用户协议</a></li>
 
-                
-                <li class="py-1"><a href="#">招贤纳士</a></li>
+				</div>
+			</div>
 
-                
-            </ul>
+		</div>
+		<nav class="breadbg">
+			<div class="container py-2">
+				当前所在页面：
+				<a href="index.html">首页</a>
+				><a href="xiadan.html">在线预约/在线下单</a> </div>
+		</nav>
 
-        </div>
+		<div id="formbox">
+			<div class="container">
+				<div class="orderForm wp9 animated bounceIn">
+					<div calss="logo textCenter">
 
-        <div class="foot-top-box2 mr-4">
+					</div>
+					<div class="inputBox">
+						<lable>
+							<span class="hidden-sm hidden-xs">服务类型：</span>
+							<span id="servicetype"></span>
+						</lable>
+					</div>
+					<div class="inputBox">
+						<lable>
+							<span class="hidden-sm hidden-xs">起始地址：</span>
+							<span id="startsite"></span>
+						</lable>
+					</div>
+					<div class="inputBox">
+						<lable>
+							<span class="hidden-sm hidden-xs">结束地址：</span>
+							<span id="endsite"></span>
+						</lable>
+					</div>
+					<div class="inputBox">
+						<lable>
+							<span class="hidden-sm hidden-xs">服务时间：</span>
+							<span id="movingtime"></span>
+						</lable>
+					</div>
+					<div class="inputBox">
+						<lable>
+							<span class="hidden-sm hidden-xs">联系人名：</span>
+							<span id="name"></span>
+						</lable>
+					</div>
+					<div class="inputBox">
+						<lable>
+							<span class="hidden-sm hidden-xs">联系电话：</span>
+							<span id="tel"></span>
+						</lable>
+					</div>
+					<div class="inputBox">
+						<lable>
+							<span class="hidden-sm hidden-xs">备注：</span>
+							<span id="remark"></span>
+						</lable>
+					</div>
+					<div class="submitBox text-center">
+						<a href="appointment.html"><input id="orders" type="button" value="在线预约"></a>
+						<a href="javascript:;" onclick="submitOrderForm()"><input id="orders" type="button" value="提交订单"></a>
+					</div>
 
-            <div class="font-weight-bold py-2">服务分类</div>
+				</div>
+			</div>
 
-            <ul class="pl-0 mb-0 d-flex justify-content-between flex-wrap">
 
-                
-                <li class="p-1">
+		</div>
+		<div class="footer">
 
-                    <a href="product.html">居民搬家</a>
+			<div class="d-flex container justify-content-between align-items-center my-2">
 
-                </li>
+				<div class="d-flex justify-content-start">
 
-                
-                <li class="p-1">
+					<div class="mr-4">
 
-                    <a href="product.html">公司搬家</a>
+						<div class="font-weight-bold py-2">关于我们</div>
 
-                </li>
+						<ul class="pl-0 mb-0">
 
-                
-                <li class="p-1">
 
-                    <a href="product.html">小型搬家</a>
+							<li class="py-1"><a href="#">公司介绍</a></li>
 
-                </li>
 
-                
-                <li class="p-1">
+							<li class="py-1"><a href="#">企业文化</a></li>
 
-                    <a href="product.html">长途搬家</a>
 
-                </li>
+							<li class="py-1"><a href="#">法律申明和隐私条款</a></li>
 
-                
-                <li class="p-1">
 
-                    <a href="product.html">空调移机</a>
+							<li class="py-1"><a href="#">用户协议</a></li>
 
-                </li>
 
-                
-                <li class="p-1">
+							<li class="py-1"><a href="#">招贤纳士</a></li>
 
-                    <a href="product.html">设备拆迁</a>
 
-                </li>
+						</ul>
 
-                
-                <li class="p-1">
+					</div>
 
-                    <a href="product.html">起重吊装</a>
+					<div class="foot-top-box2 mr-4">
 
-                </li>
+						<div class="font-weight-bold py-2">服务分类</div>
 
-            </ul>
+						<ul class="pl-0 mb-0 d-flex justify-content-between flex-wrap">
 
-        </div>
 
-        <div class="mr-4">
+							<li class="p-1">
 
-            <div class="font-weight-bold py-2">商业合作</div>
+								<a href="product.html">居民搬家</a>
 
-            <ul class="pl-0 mb-0">
+							</li>
 
-                <li class="py-1"><a href="addinfo.html">商家入驻</a></li>
 
-                <li class="py-1"><a href="addinfoarticle.html">信息发布</a></li>
+							<li class="p-1">
 
-            </ul>
+								<a href="product.html">公司搬家</a>
 
-        </div>
+							</li>
 
-        <div class="mr-4">
 
-            <div class="font-weight-bold py-2">联系我们</div>
+							<li class="p-1">
 
-            <ul class="pl-0 mb-0">
+								<a href="product.html">小型搬家</a>
 
-                <li class="py-1"><a href="http://wpa.qq.com/msgrd?v=3&uin=2830801730&site=qq&menu=yes" target="_blank">客服QQ：2830801730</a></li>
+							</li>
 
-                <li class="py-1">邮箱：zsbb168@163.com</li>
 
-                <li class="py-1">违法信息举报邮箱：shansheng168@163.com</li>
+							<li class="p-1">
 
-                <li class="py-1">侵权投诉邮箱：H168vip@163.com</li>
+								<a href="product.html">长途搬家</a>
 
-            </ul>
+							</li>
 
-        </div>
 
-    </div>
+							<li class="p-1">
 
-    <div class="text-center">
+								<a href="product.html">空调移机</a>
 
-        <img width="110" height="110" src="images/f6a557a3b6e536b9c669d0e16594bb75.jpeg" alt="巧瓜搬家网">
+							</li>
 
-        <p>微信扫一扫</p>
 
-        <p>获取更多资讯</p>
+							<li class="p-1">
 
-    </div>
-</div>
+								<a href="product.html">设备拆迁</a>
 
-    <div class="container text-center">
+							</li>
 
-    <p>贵州达月乐网络科技有限公司版权所有 <a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">黔ICP备18004443号-5 </a> 北京巧瓜搬家网 Copyright © 2020, All Rights Reserved </p>
 
-    <p>关键词：<a href="https://bj.qgbjvip.com/">北京搬家公司</a>
+							<li class="p-1">
 
-        <span><a href="https://bj.qgbjvip.com/">北京搬家网</a></span>
+								<a href="product.html">起重吊装</a>
 
-        <span><a href="https://bj.qgbjvip.com/">北京搬家公司网</a></span>
+							</li>
 
-        <span><a href="https://bj.qgbjvip.com/">北京搬家</a></span>
+						</ul>
 
-        <span><a href="https://bj.qgbjvip.com/">北京巧瓜搬家网</a></span>
+					</div>
 
-        <span><a href="https://www.qgbjvip.com/">搬家</a></span>
+					<div class="mr-4">
 
-        <span><a href="https://www.qgbjvip.com/">搬家公司</a></span>
+						<div class="font-weight-bold py-2">商业合作</div>
 
-        <span><a href="https://www.qgbjvip.com/">搬家网</a></span>
+						<ul class="pl-0 mb-0">
 
-        <span><a href="https://www.qgbjvip.com/">巧瓜搬家网</a></span>
+							<li class="py-1"><a href="addinfo.html">商家入驻</a></li>
 
-        <span><a href="https://bj.qgbjvip.com/product.html">北京搬家公司电话号码</a></span>
+							<li class="py-1"><a href="addinfoarticle.html">信息发布</a></li>
 
-        <span><a href="https://bj.qgbjvip.com/product.html">北京搬家公司哪家好</a></span>
+						</ul>
 
-        <span><a href="http://403003.com/">搬家平台</a></span>
+					</div>
 
-    </p>
+					<div class="mr-4">
 
-</div>
+						<div class="font-weight-bold py-2">联系我们</div>
 
-</div>
+						<ul class="pl-0 mb-0">
+
+							<li class="py-1"><a href="http://wpa.qq.com/msgrd?v=3&uin=2830801730&site=qq&menu=yes" target="_blank">客服QQ：2830801730</a></li>
+
+							<li class="py-1">邮箱：zsbb168@163.com</li>
+
+							<li class="py-1">违法信息举报邮箱：shansheng168@163.com</li>
+
+							<li class="py-1">侵权投诉邮箱：H168vip@163.com</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="text-center">
+
+					<img width="110" height="110" src="images/f6a557a3b6e536b9c669d0e16594bb75.jpeg" alt="巧瓜搬家网">
+
+					<p>微信扫一扫</p>
+
+					<p>获取更多资讯</p>
+
+				</div>
+			</div>
+
+			<div class="container text-center">
+
+				<p>贵州达月乐网络科技有限公司版权所有 <a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">黔ICP备18004443号-5 </a>
+					北京巧瓜搬家网 Copyright © 2020, All Rights Reserved </p>
+
+				<p>关键词：<a href="https://bj.qgbjvip.com/">北京搬家公司</a>
+
+					<span><a href="https://bj.qgbjvip.com/">北京搬家网</a></span>
+
+					<span><a href="https://bj.qgbjvip.com/">北京搬家公司网</a></span>
+
+					<span><a href="https://bj.qgbjvip.com/">北京搬家</a></span>
+
+					<span><a href="https://bj.qgbjvip.com/">北京巧瓜搬家网</a></span>
+
+					<span><a href="https://www.qgbjvip.com/">搬家</a></span>
+
+					<span><a href="https://www.qgbjvip.com/">搬家公司</a></span>
+
+					<span><a href="https://www.qgbjvip.com/">搬家网</a></span>
+
+					<span><a href="https://www.qgbjvip.com/">巧瓜搬家网</a></span>
+
+					<span><a href="https://bj.qgbjvip.com/product.html">北京搬家公司电话号码</a></span>
+
+					<span><a href="https://bj.qgbjvip.com/product.html">北京搬家公司哪家好</a></span>
+
+					<span><a href="http://403003.com/">搬家平台</a></span>
+
+				</p>
+
+			</div>
+
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/data.tools.js"></script>
+		<script src="js/data.dispose.js"></script>
+		<script>
+			getOrderForm();
+		</script>
+	</body>
+</html>

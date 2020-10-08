@@ -16,7 +16,7 @@
 					<p class="mb-0 p-2"><b>欢迎进入北京巧瓜搬家网</b>　<span class="text-danger">北京</span> </p>
 					<ul class="head-top-ul mb-0">
 						<li>
-							<p class="mb-0 p-2 text-danger">今天是 2020年08月31日 星期一</p>
+							<p class="mb-0 p-2 text-danger">今天是 <span id="mytime"></span></p>
 						</li>
 						<li class="loginregsiter"><a href="login.html">登录</a>|</li>
 						<li class="loginregsiter"><a href="register.html">注册</a>|</li>
@@ -100,67 +100,70 @@
 			<div class="container py-2"> 当前所在页面： <a href="index.html">首页</a>><a href="product.html">北京搬家商家</a> </div>
 		</nav>
 		<div class="container border mt-4 ">
-			<p class="p-2 font-size-14">找到"北京搬家公司信息"共 <span class="text-danger">16</span> 条：</p>
+			<p class="p-2 font-size-14">找到"北京搬家公司信息"共 <span class="text-danger" id="totalnumber">0</span> 条：</p>
 		</div>
 		<div class="container my-4">
 			<div class="d-flex font-size-14">
 				<div class="pl-2 text-right width5">类别：</div>
-				<ul class="pl-0 mb-0 d-flex product-lb flex-wrap">
-					<li><a href="javascript:;" class="text-danger">全部</a></li>
-					<li><a href="javascript:;">居民搬家</a></li>
-					<li><a href="javascript:;">公司搬家</a></li>
-					<li><a href="javascript:;">小型搬家</a></li>
-					<li><a href="javascript:;">长途搬家</a></li>
-					<li><a href="javascript:;">空调移机</a></li>
-					<li><a href="javascript:;">设备拆迁</a></li>
-					<li><a href="javascript:;">起重吊装</a></li>
-					<li><a href="javascript:;">搬家搬场</a></li>
-					<li><a href="javascript:;">钢琴搬运</a></li>
-					<li><a href="javascript:;">家具拆装</a></li>
-					<li><a href="javascript:;">搬运人力</a></li>
-					<li><a href="javascript:;">国际搬家</a></li>
+				<ul class="pl-0 mb-0 d-flex product-lb flex-wrap" id="service-type">
+					<li><a href="javascript:;" class="text-danger service-type"  id="service-type-0" onclick="setQueryStatus('service-type-0')">全部</a></li>
+					<li><a href="javascript:;" id="service-type-1" onclick="setQueryStatus('service-type-1')">居民搬家</a></li>
+					<li><a href="javascript:;" id="service-type-2" onclick="setQueryStatus('service-type-2')">公司搬家</a></li>
+					<li><a href="javascript:;" id="service-type-3" onclick="setQueryStatus('service-type-3')">小型搬家</a></li>
+					<li><a href="javascript:;" id="service-type-4" onclick="setQueryStatus('service-type-4')">长途搬家</a></li>
+					<li><a href="javascript:;" id="service-type-5" onclick="setQueryStatus('service-type-5')">空调移机</a></li>
+					<li><a href="javascript:;" id="service-type-6" onclick="setQueryStatus('service-type-6')">设备拆迁</a></li>
+					<li><a href="javascript:;" id="service-type-7" onclick="setQueryStatus('service-type-7')">起重吊装</a></li>
+					<li><a href="javascript:;" id="service-type-8" onclick="setQueryStatus('service-type-8')">搬家搬场</a></li>
+					<li><a href="javascript:;" id="service-type-9" onclick="setQueryStatus('service-type-9')">钢琴搬运</a></li>
+					<li><a href="javascript:;" id="service-type-10" onclick="setQueryStatus('service-type-10')">家具拆装</a></li>
+					<li><a href="javascript:;" id="service-type-11" onclick="setQueryStatus('service-type-11')">搬运人力</a></li>
+					<li><a href="javascript:;" id="service-type-12" onclick="setQueryStatus('service-type-12')">国际搬家</a></li>
 				</ul>
 			</div>
 			<div class="d-flex font-size-14  mt-2">
 				<div class="pl-2 text-right width5">服务区域：</div>
-				<ul class="pl-0 mb-0 d-flex product-lb flex-wrap">
-					<li><a href="javascript:;" class="text-danger">全部</a></li>
-					<li><a href="javascript:;">朝阳</a></li>
-					<li><a href="javascript:;">海淀</a></li>
-					<li><a href="javascript:;">东城</a></li>
-					<li><a href="javascript:;">西城</a></li>
-					<li><a href="javascript:;">丰台</a></li>
-					<li><a href="javascript:;">通州</a></li>
-					<li><a href="javascript:;">石景山</a></li>
-					<li><a href="javascript:;">房山</a></li>
-					<li><a href="javascript:;">昌平</a></li>
-					<li><a href="javascript:;">大兴</a></li>
-					<li><a href="javascript:;">顺义</a></li>
-					<li><a href="javascript:;">密云</a></li>
-					<li><a href="javascript:;">怀柔</a></li>
-					<li><a href="javascript:;">延庆</a></li>
-					<li><a href="javascript:;">平谷</a></li>
-					<li><a href="javascript:;">门头沟</a></li>
-					<li><a href="javascript:;">北京周边</a></li>
+				<ul class="pl-0 mb-0 d-flex product-lb flex-wrap" id="service-region">
+					<li><a href="javascript:;" class="text-danger service-region"  id="service-region-0" onclick="setQueryStatus('service-region-0')">全部</a></li>
+					<li><a href="javascript:;" id="service-region-1" onclick="setQueryStatus('service-region-1')">朝阳</a></li>
+					<li><a href="javascript:;" id="service-region-2" onclick="setQueryStatus('service-region-2')">海淀</a></li>
+					<li><a href="javascript:;" id="service-region-3" onclick="setQueryStatus('service-region-3')">东城</a></li>
+					<li><a href="javascript:;" id="service-region-4" onclick="setQueryStatus('service-region-4')">西城</a></li>
+					<li><a href="javascript:;" id="service-region-5" onclick="setQueryStatus('service-region-5')">丰台</a></li>
+					<li><a href="javascript:;" id="service-region-6" onclick="setQueryStatus('service-region-6')">通州</a></li>
+					<li><a href="javascript:;" id="service-region-7" onclick="setQueryStatus('service-region-7')">石景山</a></li>
+					<li><a href="javascript:;" id="service-region-8" onclick="setQueryStatus('service-region-8')">房山</a></li>
+					<li><a href="javascript:;" id="service-region-9" onclick="setQueryStatus('service-region-9')">昌平</a></li>
+					<li><a href="javascript:;" id="service-region-10" onclick="setQueryStatus('service-region-10')">大兴</a></li>
+					<li><a href="javascript:;" id="service-region-11" onclick="setQueryStatus('service-region-11')">顺义</a></li>
+					<li><a href="javascript:;" id="service-region-12" onclick="setQueryStatus('service-region-12')">密云</a></li>
+					<li><a href="javascript:;" id="service-region-13" onclick="setQueryStatus('service-region-13')">怀柔</a></li>
+					<li><a href="javascript:;" id="service-region-14" onclick="setQueryStatus('service-region-14')">延庆</a></li>
+					<li><a href="javascript:;" id="service-region-15" onclick="setQueryStatus('service-region-15')">平谷</a></li>
+					<li><a href="javascript:;" id="service-region-16" onclick="setQueryStatus('service-region-16')">门头沟</a></li>
+					<li><a href="javascript:;" id="service-region-17" onclick="setQueryStatus('service-region-17')">北京周边</a></li>
 				</ul>
 			</div>
 			<div class="d-flex font-size-14 mt-2">
 				<div class="pl-2 text-right width5">服务基价：</div>
-				<ul class="pl-0 mb-0 d-flex product-lb flex-wrap">
-					<li><a href="javascript:;" class="text-danger">全部</a></li>
-					<li><a href="javascript:;">50元以下</a></li>
-					<li><a href="javascript:;">50元-100元</a></li>
-					<li><a href="javascript:;">100元-150元</a></li>
-					<li><a href="javascript:;">150元-200元</a></li>
-					<li><a href="javascript:;">200元-250元</a></li>
-					<li><a href="javascript:;">250元以上</a></li>
+				<ul class="pl-0 mb-0 d-flex product-lb flex-wrap" id="money-region">
+					<li><a href="javascript:;" class="text-danger money-region" id="money-region-0" onclick="setQueryStatus('money-region-0')" data-value="全部">全部</a></li>
+					<li><a href="javascript:;" id="money-region-1" onclick="setQueryStatus('money-region-1')" data-value="0-50">50元以下</a></li>
+					<li><a href="javascript:;" id="money-region-2" onclick="setQueryStatus('money-region-2')" data-value="50-100">50元-100元</a></li>
+					<li><a href="javascript:;" id="money-region-3" onclick="setQueryStatus('money-region-3')" data-value="100-150">100元-150元</a></li>
+					<li><a href="javascript:;" id="money-region-4" onclick="setQueryStatus('money-region-4')" data-value="150-200">150元-200元</a></li>
+					<li><a href="javascript:;" id="money-region-5" onclick="setQueryStatus('money-region-5')" data-value="200-250">200元-250元</a></li>
+					<li><a href="javascript:;" id="money-region-6" onclick="setQueryStatus('money-region-6')" data-value="250-1000000000">250元以上</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="container d-flex justify-content-between my-4">
 			<div class="w-75">
-				<div class="bg-light p-2 border font-size-14 d-flex align-items-center auth-select"> <a class="text-dark" href="https://bj.qgbjvip.com/product-0-0-1-0-0-1.html"><img
-						 src="images/p5_select.png" class="mr-1" width="11" height="11" alt> 认证商家</a> </div>
+				<div class="bg-light p-2 border font-size-14 d-flex align-items-center auth-select"> 
+					<!-- <a class="text-dark" href="javascript:;">
+						<img src="images/p5_select.png" class="mr-1" width="11" height="11" alt> 认证商家
+					</a> -->
+				</div>
 				<div id="mymessage"></div>
 				<div class="text-center" id="mypage"></div>
 				<ul class="pl-0 mb-0">
@@ -172,24 +175,7 @@
 					<div class="mb-3">
 						<h2 class="right-tit"> 北京搬家公司排行榜 </h2>
 					</div>
-					<ul class="pl-0 mb-0 pro-right-rank right-qtr">
-						<li class="py-1"> <a class="text-dark" href="https://bj.qgbjvip.com/product/3160.html"><span>1</span>北京同城搬家</a>
-						</li>
-						<li class="py-1"> <a class="text-dark" href="https://bj.qgbjvip.com/product/3159.html"><span>2</span>北京万福搬家</a>
-						</li>
-						<li class="py-1"> <a class="text-dark" href="https://bj.qgbjvip.com/product/3081.html"><span>3</span>北京利康搬家公司</a>
-						</li>
-						<li class="py-1"> <a class="text-dark" href="https://bj.qgbjvip.com/product/3080.html"><span>4</span>北京市利康搬家公司</a>
-						</li>
-						<li class="py-1"> <a class="text-dark" href="https://bj.qgbjvip.com/product/2988.html"><span>5</span>兄弟永发搬家公司</a>
-						</li>
-						<li class="py-1"> <a class="text-dark" href="https://bj.qgbjvip.com/product/2975.html"><span>6</span>北京兄弟搬家公司</a>
-						</li>
-						<li class="py-1"> <a class="text-dark" href="https://bj.qgbjvip.com/product/2973.html"><span>7</span>北京兄弟搬家公司</a>
-						</li>
-						<li class="py-1"> <a class="text-dark" href="https://bj.qgbjvip.com/product/1585.html"><span>8</span>利康北京搬家公司排行榜</a>
-						</li>
-					</ul>
+					<div id="companylist"></div>
 				</div>
 				<div class="mb-4">
 					<div class="mb-3">
@@ -198,6 +184,7 @@
 					<ul class="pl-0 mb-0 right-qtr">
 						<li class="py-1"><a href="zixun.html" class="text-dark">北京搬家资讯</a></li>
 						<li class="py-1"><a href="changshi.html" class="text-dark">北京搬家常识</a></li>
+						<li class="py-1"><a href="jiri.html" class="text-dark">北京搬家吉日</a></li>
 						<li class="py-1"><a href="wenda.html" class="text-dark">北京搬家问答</a></li>
 					</ul>
 				</div>
@@ -205,31 +192,11 @@
 					<div class="mb-3">
 						<h2 class="right-tit"> 阅读排行榜 </h2>
 					</div>
-					<ul class="pl-0 mb-0 right-qtr">
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/2038.html" title="保险柜搬家注意事项？" class="text-dark">保险柜搬家注意事项？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/137.html" title="经常搬家对小孩子有什么影响？" class="text-dark">经常搬家对小孩子有什么影响？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/1960.html" title="安全搬家注意事项？" class="text-dark">安全搬家注意事项？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/3093.html" title="北京搬家没有家具还要找搬家公司吗？" class="text-dark">北京搬家没有家具还要找搬家公司吗？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/3290.html" title="北京小型搬家公司哪家好？" class="text-dark">北京小型搬家公司哪家好？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/3336.html" title="北京搬家搬迁哪家搬家公司好？" class="text-dark">北京搬家搬迁哪家搬家公司好？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/3275.html" title="北京搬家网约车靠谱吗？" class="text-dark">北京搬家网约车靠谱吗？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/3123.html" title="北京搬家打包都需要啥？" class="text-dark">北京搬家打包都需要啥？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/3306.html" title="北京搬家技巧有哪些？" class="text-dark">北京搬家技巧有哪些？</a></li>
-						<li class="py-1"><a href="https://bj.qgbjvip.com/article/3108.html" title="北京搬家有哪些忌讳需要了解？" class="text-dark">北京搬家有哪些忌讳需要了解？</a></li>
-					</ul>
+					<div id="rankinglist"></div>
 				</div>
 				<div>
 					<h2 class="my-2">其他人还浏览</h2>
-					<ul class="pl-0 mb-0 right-qtr">
-						<li class="py-1"> <a href="https://bj.qgbjvip.com/product/1135.html" title="北京兄弟骏马飞腾搬家有限责任公司"> <span>1</span>北京兄弟骏马飞腾搬家有限责任公司
-							</a> </li>
-						<li class="py-1"> <a href="https://bj.qgbjvip.com/product/1585.html" title="利康北京搬家公司排行榜"> <span>2</span>利康北京搬家公司排行榜
-							</a> </li>
-						<li class="py-1"> <a href="https://bj.qgbjvip.com/product/2988.html" title="兄弟永发搬家公司"> <span>3</span>兄弟永发搬家公司 </a>
-						</li>
-						<li class="py-1"> <a href="https://bj.qgbjvip.com/product/3080.html" title="北京市利康搬家公司"> <span>4</span>北京市利康搬家公司
-							</a> </li>
-					</ul>
+					<div id="otherlook"></div>
 				</div>
 			</div>
 		</div>
@@ -302,27 +269,34 @@
 		<script src="js/data.tools.js"></script>
 		<script src="js/data.dispose.js"></script>
 		<script>
+			queryAllProduct();
 			$('body').on('click', '.p5-s-del', function() {
 				var type = $(this).attr('type'),
 					index = $(this).attr('index');
-				$(this).parent('li').remove() if (type == 1) {
+				$(this).parent('li').remove();
+				if (type == 1) {
 					$('.p5-class-select').children('li').eq(index).attr('num', 1)
 				} else {
 					$('.p5-area-select').children('li').eq(index).attr('num', 1)
 				}
-			}) $('.p5-l-s-xk a').click(function(e) {
-				var num = $(this).attr('num') if (num == 1) {
+			});
+			$('.p5-l-s-xk a').click(function(e) {
+				var num = $(this).attr('num');
+				if (num == 1) {
 					$(this).children('img').attr('src', 'images/p11_select_yes.png');
 					$(this).attr('num', 2)
 				} else {
 					$(this).children('img').attr('src', 'images/p5_select.png');
 					$(this).attr('num', 1)
 				}
-			}) $('.p5-l-s-li').click(function() {
-				$('.p5-l-s-smxz').hide() $(this).siblings('.p5-l-s-smxz').show()
-			}) $('.p5-l-s-smxz li').click(function() {
-				$('.p5-l-s-smxz').hide()
-			})
+			});
+			$('.p5-l-s-li').click(function() {
+				$('.p5-l-s-smxz').hide();
+				$(this).siblings('.p5-l-s-smxz').show();
+			});
+			$('.p5-l-s-smxz li').click(function() {
+				$('.p5-l-s-smxz').hide();
+			});
 		</script>
 		<script src="js/position.js"></script>
 		<script>
