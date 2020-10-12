@@ -1197,7 +1197,7 @@ function getCompanyTj() {
 		var str = "";
 		for (var i = 0; i < data.length; i++) {
 			str += "<div class=\"con-txl position-relative border my-2\">" +
-			"<a href=\"https://bj.qgbjvip.com/product/1431.html\" class=\"first\">" +
+			"<a href=\"javascript:;\" onclick='queryProductById(" + (i + 1) + ")' class=\"first\">" +
 			"	<img src=\""+ data[i].companyphoto[0].path +"\" alt=\"" + data[i].name + "\">" +
 			"</a>" +
 			"<a href=\"https://bj.qgbjvip.com/product/1431.html\" class=\"p1-bjgs-list-tit\">" + data[i].name + "</a>" +
@@ -1285,7 +1285,8 @@ function getProductById() {
 		if (data[id - 1].approvestate == "AUTHENTICATED") {
 			$("#shoperright").css("display", "block");
 		}
-		$("#companymessageid").attr("value", data[id - 1].companymessageid)
+		$("#companymessageid").attr("value", data[id - 1].companymessageid);
+		getPublishedReview();
 	}
 }
 

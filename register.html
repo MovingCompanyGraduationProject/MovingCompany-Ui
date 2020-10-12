@@ -459,6 +459,7 @@
 							json['password'] = $("#txtPwd").val();
 							json['disId'] = "";
 							json['idnumber'] = "";
+							json['address'] = "";
 							url = "userRegister";
 							MySubmitString(JSON.stringify(json), url, function(data) {
 								if (data != null&&data.msg == "ok") {
